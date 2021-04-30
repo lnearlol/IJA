@@ -2,7 +2,11 @@ package ija.ija2021.projekt.classes;
 
 import ija.ija2021.projekt.classes.Goods;
 import ija.ija2021.projekt.classes.GoodsItem;
+import javafx.scene.shape.Shape;
+
 import java.util.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class Shelf {
 
@@ -10,12 +14,15 @@ public class Shelf {
     private ArrayList <GoodsItem> goodsShelf;
     Stop stop;
     Coordinates coordinates;
-
+    @JsonIgnore
+    private ArrayList<Shape> gui;
+    
     public Shelf(double x, double y, double stopX, double stopY, int id){
     	this.id = id;
         this.goodsShelf = new ArrayList <GoodsItem>();
-        stop = new Stop(id, stopX, stopY);
-        coordinates = new Coordinates(x, y);
+        this.stop = new Stop(id, new Coordinates(stopX, stopY));
+
+        this.coordinates = new Coordinates(x, y);
     }
 
     public Stop getStop() {
@@ -75,6 +82,33 @@ public class Shelf {
     public boolean isEmpty() {
     	return goodsShelf.isEmpty(); 
     }
+    
+    public String goodsInfo() {
+    	String str = "";
+    	ArrayList <GoodsItem> dest = new ArrayList <GoodsItem>(this.goodsShelf);
+    	while (!dest.isEmpty()) {
+    		int counter = 0;
+    		Goods currentGoods = dest.get(0).goods();
+    		for (GoodsItem elem : this.goodsShelf) {
+    			if (elem.goods().equals(currentGoods)) {
+    				counter++;
+    				dest.remove(elem);
+    			}
+    		}
+    		str += currentGoods.getName() + " : " + String.valueOf(counter) + "; ";
+    		counter = 0;
+    	}
+    	
+    	return str;
+    }
 
-
+	@Override
+	public String toString() {
+	    return "Shelf{" +
+	            "id='" + id + '\'' +
+	            ", coordinates=" + coordinates +
+                ", stop coordinates=" + this.stop.getCoordinates() + 
+	            ", goods: " + this.goodsInfo() + 
+	            '}';
+	}
 }

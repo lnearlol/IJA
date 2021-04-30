@@ -159,25 +159,25 @@ public class Cart extends Thread {
 	}
 	
 	public boolean createShelfRoute() {
-		int i = 0;
-		
-		while(true) {
-        	Buy buy = this.order.getFirstBuy();
-        	if (buy == null)
-        		break;
-        	Goods findGoods = buy.getBuyGoods();
-        	int goodsCounter = buy.getBuyCount();
-//        	System.out.println ("i = "+ i);
-        	this.ShortestWayShelf(findGoods, goodsCounter);
-        	this.order.removeBuy(buy);
-        	// find shell for this buy
-        	i++;
-        }
-		
-		if(this.shelfRoute != null) {
-			return true;
-		}
-		else 
+//		int i = 0;
+//		
+//		while(true) {
+//        	Buy buy = this.order.getFirstBuy();
+//        	if (buy == null)
+//        		break;
+//        	Goods findGoods = buy.getBuyGoods();
+//        	int goodsCounter = buy.getBuyCount();
+////        	System.out.println ("i = "+ i);
+//        	this.ShortestWayShelf(findGoods, goodsCounter);
+//        	this.order.removeBuy(buy);
+//        	// find shell for this buy
+//        	i++;
+//        }
+//		
+//		if(this.shelfRoute != null) {
+//			return true;
+//		}
+//		else 
 			return false;
 	}
 	

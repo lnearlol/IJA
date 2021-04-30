@@ -1,10 +1,16 @@
 package ija.ija2021.projekt.classes;
 
+import java.util.Objects;
+
 public class Coordinates {
 	private double x;
 	private double y;
 	
-	Coordinates(double x, double y)
+	public Coordinates() {
+		
+	}
+	
+	public Coordinates(double x, double y)
 	{
 		this.x = x;
 		this.y = y;
@@ -30,5 +36,30 @@ public class Coordinates {
 	}
 	
 	
+    @Override
+    public boolean equals(Object coordinates){
+        
+        if (this == coordinates)
+            return true;
+        else if (coordinates == null)
+            return false;
+        else if (coordinates instanceof Coordinates){
+            Coordinates tmp = (Coordinates) coordinates;
+            if(tmp.getX() == this.x && tmp.getY() == this.y){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode(){
+    	return Objects.hash(x, y);
+    }
 	
+	 @Override
+	 public String toString() {
+	     return " ( " + this.x +
+	             ", " + this.y + ")";
+	}
 }

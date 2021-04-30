@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<company>
+    <base>
+        <x>1</x>
+        <y>1</y>
+    </base>
+
+    <line id="10">
+        <start_x>100</start_x>
+        <start_y>100</start_y>
+        <end_x>300</end_x>
+        <end_y>100</end_y>
+        <shelf id="100">
+            <x>105</x>
+            <y>110</y>
+            <stop_x>105</stop_x>
+            <stop_y>100</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="101">
+            <x>150</x>
+            <y>110</y>
+            <stop_x>150</stop_x>
+            <stop_y>100</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+    </line>
+
+
+    <line id="11">
+        <start_x>100</start_x>
+        <start_y>200</start_y>
+        <end_x>300</end_x>
+        <end_y>200</end_y>
+        <shelf id="110">
+            <x>105</x>
+            <y>210</y>
+            <stop_x>105</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="monitor">422</goods_type>
+                <goods_type name="notepad">111</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="111">
+            <x>150</x>
+            <y>210</y>
+            <stop_x>150</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="mouse">1010</goods_type>
+                <goods_type name="keyboard">990</goods_type>
+            </goods>
+        </shelf>
+    </line>
+
+    <line id="12">
+        <start_x>100</start_x>
+        <start_y>300</start_y>
+        <end_x>300</end_x>
+        <end_y>300</end_y>
+        <shelf id="120">
+            <x>105</x>
+            <y>310</y>
+            <stop_x>105</stop_x>
+            <stop_y>300</stop_y>
+            <goods>
+                <goods_type name="phone">9022</goods_type>
+                <goods_type name="smartphone">1111</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="121">
+            <x>150</x>
+            <y>310</y>
+            <stop_x>150</stop_x>
+            <stop_y>300</stop_y>
+            <goods>
+                <goods_type name="table">44</goods_type>
+                <goods_type name="keyboard">250</goods_type>
+            </goods>
+        </shelf>
+    </line>
+
+
+    <orders>
+        <order id = "1">
+            <start>09:30:10</start>
+            <goods_type name="table">5</goods_type>
+            <goods_type name="keyboard">20</goods_type>
+        </order>
+
+        <order id = "2">
+            <start>09:32:10</start>
+            <goods_type name="shelf">12</goods_type>
+            <goods_type name="chair">45</goods_type>
+        </order>
+
+        <order id = "3">
+            <start>12:00:00</start>
+            <goods_type name="toy">100</goods_type>
+        </order>
+
+        <order id = "4">
+            <start>17:45:45</start>
+            <goods_type name="toy">5</goods_type>
+            <goods_type name="robot">77</goods_type>
+            <goods_type name="chair">2</goods_type>
+        </order>
+
+         <order id = "5">
+            <start>17:45:45</start>
+            <goods_type name="chair">2</goods_type>
+            <goods_type name="robot">1</goods_type>
+            <goods_type name="keyboard">1</goods_type>
+        </order>
+
+    </orders>
+
+</company>
