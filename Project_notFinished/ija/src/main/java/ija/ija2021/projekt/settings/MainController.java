@@ -22,6 +22,13 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
+//
+import javafx.scene.text.Font; 
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text; 
+import javafx.stage.Stage; 
+
+
 public class MainController {
     @FXML
     private Pane map_base;
@@ -72,6 +79,23 @@ public class MainController {
     	
     }
     
+    public void clickOnShelf(){
+        
+        Text text = new Text("Click on the circle to change its color"); 
+      
+      //Setting the font of the text 
+      text.setFont(Font.font(null, FontWeight.BOLD, 15));     
+      
+      //Setting the color of the text 
+      text.setFill(Color.CRIMSON); 
+  
+      //setting the position of the text 
+      text.setX(150); 
+      text.setY(50); 
+
+      line_base.getChildren().addAll(text);
+
+    }
 
     public void addElementToScene(Drawable element)
     {

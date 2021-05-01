@@ -6,7 +6,12 @@ import ija.ija2021.projekt.classes.*;
 import java.util.concurrent.Semaphore;
 import java.util.ArrayList;
 
-public class Cart extends Thread {
+import ija.ija2021.projekt.settings.Drawable;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Ellipse;
+import javafx.scene.shape.Shape;
+
+public class Cart extends Thread implements Drawable {
 	private int id;
 	private String color;
 	private boolean isFree;
@@ -18,31 +23,29 @@ public class Cart extends Thread {
 	private ArrayList <Shelf> shelfList;
 	private ArrayList <Shelf> shelfRoute;
 	private Order order;
+	private Coordinates startCoordinates;
 
+	private ArrayList <Shape> gui;
 	
 	private Base base;
 	Semaphore semaphore;
-	Cart(int id, String color, Base base, Semaphore sem){
-//		System.out.println("CART CONSTRUCTOR START");
+	public Cart(int id, String color, Base base, /*Semaphore sem,*/ Coordinates coordinates){
 		this.id = id;
 		this.color = color;
 		this.isFree = true;
-//		System.out.println("CART CONSTRUCTOR NEW CORDS");
-		this.coordinates = new Coordinates(0, 0); 
+		this.coordinates = coordinates; 
+		this.startCoordinates = coordinates;
 		this.speed = 5;
-//		System.out.println("CART CONSTRUCTOR NEW LISTS");
+
         this.itemList = new ArrayList<GoodsItem>();
         this.itemListFind = new ArrayList<GoodsItem>();
         this.stopList = new ArrayList<Stop>();
         this.shelfList = new ArrayList<Shelf>(base.getShelfList());
         this.shelfRoute = new ArrayList<Shelf>();
         
-        
-//        System.out.println("CART CONSTRUCTOR base");
        this.base = base;
-       this.semaphore = sem;
-//       System.out.println("CART CONSTRUCTOR ADD DO CART LIST");
-//       System.out.println("CART CONSTRUCTOR END");
+	   this.setGui();
+    //    this.semaphore = sem;
 
 	}
 	
@@ -229,6 +232,27 @@ public class Cart extends Thread {
 
 	public void addToStopList(GoodsItem item, int number) {
 		// finding shelf with coordinate sub
+	}
+
+	public void setGui()
+    {
+        Ellipse cart = new Ellipse(this.startCoordinates.getX(), this.startCoordinates.getY(), 8, 8);
+		cart.setFill(Color.rgb(255, 165, 0, 0.75));     
+        gui = new ArrayList<>();
+        gui.add(cart);
+    }
+
+    @Override
+    public ArrayList<Shape> getGui() {
+        return gui;
+    }
+
+	@Override
+	public String toString(){
+		return "Cart: {\n" + 
+		"Cart ID: " + this.id + "\n" +
+		"Cart Coordinates = " + this.startCoordinates
+		+ "\n}\n";
 	}
 	
 }

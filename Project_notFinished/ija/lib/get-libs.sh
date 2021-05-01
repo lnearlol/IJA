@@ -6,3 +6,4 @@ wget https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.
 wget https://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.9/jackson-dataformat-yaml-2.9.9.jar 
 wget https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar 
 wget https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar
+wget https://github.com/JodaOrg/joda-time/releases/download/v2.10.10/joda-time-2.10.10.jar

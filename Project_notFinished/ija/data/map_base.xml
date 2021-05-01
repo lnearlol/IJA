@@ -1,19 +1,29 @@
 <?xml version="1.0"?>
 <company>
     <base>
-        <x>1</x>
-        <y>1</y>
+        <x>30</x>
+        <y>135</y>
     </base>
 
-    <line id="10">
-        <start_x>100</start_x>
+<!-- // regal -> 399.6, 53.2, zastavka -> 413.6f, 39.9f -> shelf = stop (x  -14, y + 13.3)  -->
+<!-- new shelf -> (x+26.6) -->
+
+    <street id="1">
+        <start_x>95</start_x>
+        <start_y>200</start_y>
+        <end_x>150</end_x>
+        <end_y>200</end_y>
+    </street>
+
+    <street id="10">
+        <start_x>150</start_x>
         <start_y>100</start_y>
-        <end_x>300</end_x>
+        <end_x>350</end_x>
         <end_y>100</end_y>
         <shelf id="100">
-            <x>105</x>
-            <y>110</y>
-            <stop_x>105</stop_x>
+            <x>161</x>
+            <y>113.3</y>
+            <stop_x>175</stop_x>
             <stop_y>100</stop_y>
             <goods>
                 <goods_type name="toy">525</goods_type>
@@ -22,27 +32,27 @@
         </shelf>
 
         <shelf id="101">
-            <x>150</x>
-            <y>110</y>
-            <stop_x>150</stop_x>
+            <x>187.6</x>
+            <y>113.3</y>
+            <stop_x>201.6</stop_x>
             <stop_y>100</stop_y>
             <goods>
                 <goods_type name="shelf">100</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
         </shelf>
-    </line>
+    </street>
 
 
-    <line id="11">
-        <start_x>100</start_x>
+    <street id="11">
+        <start_x>150</start_x>
         <start_y>200</start_y>
-        <end_x>300</end_x>
+        <end_x>350</end_x>
         <end_y>200</end_y>
         <shelf id="110">
-            <x>105</x>
-            <y>210</y>
-            <stop_x>105</stop_x>
+            <x>161</x>
+            <y>213.3</y>
+            <stop_x>175</stop_x>
             <stop_y>200</stop_y>
             <goods>
                 <goods_type name="monitor">422</goods_type>
@@ -51,26 +61,26 @@
         </shelf>
 
         <shelf id="111">
-            <x>150</x>
-            <y>210</y>
-            <stop_x>150</stop_x>
+            <x>187.6</x>
+            <y>213.3</y>
+            <stop_x>201.6</stop_x>
             <stop_y>200</stop_y>
             <goods>
                 <goods_type name="mouse">1010</goods_type>
                 <goods_type name="keyboard">990</goods_type>
             </goods>
         </shelf>
-    </line>
+    </street>
 
-    <line id="12">
-        <start_x>100</start_x>
+    <street id="12">
+        <start_x>150</start_x>
         <start_y>300</start_y>
-        <end_x>300</end_x>
+        <end_x>350</end_x>
         <end_y>300</end_y>
         <shelf id="120">
-            <x>105</x>
-            <y>310</y>
-            <stop_x>105</stop_x>
+            <x>161</x>
+            <y>313.3</y>
+            <stop_x>175</stop_x>
             <stop_y>300</stop_y>
             <goods>
                 <goods_type name="phone">9022</goods_type>
@@ -79,16 +89,44 @@
         </shelf>
 
         <shelf id="121">
-            <x>150</x>
-            <y>310</y>
-            <stop_x>150</stop_x>
+            <x>187.6</x>
+            <y>313.3</y>
+            <stop_x>201.6</stop_x>
             <stop_y>300</stop_y>
             <goods>
                 <goods_type name="table">44</goods_type>
                 <goods_type name="keyboard">250</goods_type>
             </goods>
         </shelf>
-    </line>
+    </street>
+
+     <street id="20">
+        <start_x>150</start_x>
+        <start_y>100</start_y>
+        <end_x>150</end_x>
+        <end_y>200</end_y>
+    </street>
+
+    <street id="30">
+        <start_x>150</start_x>
+        <start_y>200</start_y>
+        <end_x>150</end_x>
+        <end_y>300</end_y>
+    </street>
+
+     <street id="21">
+        <start_x>350</start_x>
+        <start_y>100</start_y>
+        <end_x>350</end_x>
+        <end_y>200</end_y>
+    </street>
+
+    <street id="31">
+        <start_x>350</start_x>
+        <start_y>200</start_y>
+        <end_x>350</end_x>
+        <end_y>300</end_y>
+    </street>
 
 
     <orders>
@@ -124,5 +162,20 @@
         </order>
 
     </orders>
+
+    <carts>
+        <cart id = "1">
+            <x>65</x>
+            <y>190</y>
+        </cart>
+        <cart id = "2">
+            <x>65</x>
+            <y>210</y>
+        </cart>
+        <cart id = "3">
+            <x>65</x>
+            <y>230</y>
+        </cart>
+    </carts>
 
 </company>

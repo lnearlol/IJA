@@ -3,32 +3,46 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
-public class Base {
+import ija.ija2021.projekt.settings.Drawable;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
+
+
+public class Base implements Drawable {
 	private Coordinates coordinates;	
-	private ArrayList <Stop> stopList;
-	private ArrayList <Order> orderList;
-	private ArrayList <Shelf> shelfList;
-	private ArrayList<Line> lineList;
-	
+	private ArrayList<Stop> stopList;
+	private ArrayList<Order> orderList;
+	private ArrayList<Shelf> shelfList;
+	private ArrayList<Street> streetList;
+	private ArrayList<Cart> cartList;
 	private ArrayList<Goods> goodsList;
 	private ArrayList<Buy> activeBuyList;
+
+	private ArrayList<Shape> gui;
 	
 	public Base(double x, double y) {
 		this.coordinates = new Coordinates(x, y);
 		this.orderList = new ArrayList <Order>();
 		this.shelfList = new ArrayList <Shelf>();
 		this.stopList = new ArrayList <Stop>();
-		this.lineList = new ArrayList <Line>();
+		this.streetList = new ArrayList <Street>();
 		this.goodsList = new ArrayList <Goods>();
 		this.activeBuyList = new ArrayList<Buy>();
+		this.cartList = new ArrayList<Cart>();
+
+		this.setGui();
 	}
 
 	public void addToGoodsList(String name){
 		if(!isInGoodsList(name)){
 			this.goodsList.add(new Goods(name));
 		}
+	}
+
+	public void addToCartList(Cart cart){
+		this.cartList.add(cart);
 	}
 
 	public boolean isInGoodsList(String name){
@@ -63,7 +77,7 @@ public class Base {
 		this.activeBuyList.add(buy);
 	}
 
-	@JsonIgnore
+
 	public void removeFromOrderList(Order order) {
 		this.orderList.remove(order);
 	}
@@ -72,13 +86,16 @@ public class Base {
 	public void addToStopList(Stop stop) {
 		this.stopList.add(stop);
 	}
+
+	public void addToShelfList(Shelf shelf) {
+		this.shelfList.add(shelf);
+	}
 //	
 	public Base getBase() {
 		return this;
 	}
-	@JsonIgnore
+
 	public Order getOrder() {
-//		System.out.println("BASE getOrder");
 		return this.orderList.get(0);
 	}
 	
@@ -92,36 +109,40 @@ public class Base {
 	
 	
 	// ---------------------
-    public void addLine(Line line) {
-        this.lineList.add(line);
+    public void addStreet(Street street) {
+        this.streetList.add(street);
     }
     
     public void setStops(ArrayList<Stop> stopList) {
         this.stopList = stopList;
     }
-    @JsonIgnore
+
     public void setShelves(ArrayList<Shelf> shelves) {
         this.shelfList = shelves;  
     }
-    @JsonIgnore
-    public ArrayList<Line> getLineList() {
-        return this.lineList;
+
+    public ArrayList<Street> getStreetList() {
+        return this.streetList;
     }
     
     public ArrayList<Stop> getStopList() {
         return this.stopList;
     }
-    @JsonIgnore
+
     public ArrayList<Shelf> getShelfList() {
         return this.shelfList;  
     }
+
+	public ArrayList<Cart> getCartList() {
+        return this.cartList;  
+    }
     
-	public String linesInfo(){
+	public String streetsInfo(){
 		String str = "";
 		int count = 0;
-    	for (Line line : this.lineList){
+    	for (Street street : this.streetList){
 			count++;
-			str += "[" + count + "] " + line + "\n";
+			str += "[" + count + "] " + street + "\n";
 		}
     	return str;
 	}
@@ -135,12 +156,27 @@ public class Base {
     	return str;
 	}
 
+
+	public void setGui()
+    {
+        Rectangle base = new Rectangle(this.coordinates.getX(), this.coordinates.getY(), 66.5, 132.0);
+    	base.setFill(Color.DODGERBLUE);   
+        gui = new ArrayList<>();
+        gui.add(base);
+    }
+
+    @Override
+    public ArrayList<Shape> getGui() {
+        return gui;
+    }
+
     @Override
     public String toString() {
         return "Base {\n" +
                 "Base coordinates =" + this.coordinates + 
-                "\nBase lines:\n" + this.linesInfo() +
+                "\nBase streets:\n" + this.streetsInfo() +
 				"\nOrder list:\n " + this.orderList + "\n"+
+				"Cart list:\n" + this.cartList +
                 "\n}";
     }
     

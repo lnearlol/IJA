@@ -96,7 +96,7 @@ public class Main extends Application {
 				
 			}
             // get <staff>
-            NodeList list = doc.getElementsByTagName("line");
+            NodeList list = doc.getElementsByTagName("street");
 
             for (int temp = 0; temp < list.getLength(); temp++) {
 
@@ -133,9 +133,9 @@ public class Main extends Application {
 //                    System.out.printf("Salary [Currency] : %,.2f [%s]%n%n", Float.parseFloat(salary), currency);
                     
 
-                    Line createLine = new Line(Double.parseDouble(start_x), Double.parseDouble(start_y), 
+                    Street createStreet = new Street(Double.parseDouble(start_x), Double.parseDouble(start_y), 
                     Double.parseDouble(end_x), Double.parseDouble(end_y), Integer.parseInt(id));
-                    base.addLine(createLine);
+                    base.addStreet(createStreet);
                     NodeList childList =  element.getChildNodes();
                     for(int tmp = 0; tmp < childList.getLength(); tmp++) {
                         Node myNode = childList.item(tmp);
@@ -151,6 +151,7 @@ public class Main extends Application {
                             Shelf createShelf = new Shelf(Double.parseDouble(shelf_x), Double.parseDouble(shelf_y),
                             Double.parseDouble(stop_x), Double.parseDouble(stop_y), Integer.parseInt(shelf_id));
                             base.addToStopList(createShelf.getStop());
+                            base.addToShelfList(createShelf);
 
                             NodeList goodsInsideList = myElement.getElementsByTagName("goods_type");
                             for(int inside = 0; inside < goodsInsideList.getLength(); inside++){
@@ -159,6 +160,7 @@ public class Main extends Application {
                                 String goodsName = goodsElement.getAttribute("name");
                                 String itemCount = goodsElement.getTextContent();
 
+                                createShelf.addToProductInform(new ProductInform(goodsName, Integer.parseInt(itemCount)));
                                 base.addToGoodsList(goodsName);
                                 Goods goods = base.getGoods(goodsName);
                                 for (int itemCounter = 0; itemCounter < Integer.parseInt(itemCount); itemCounter++){
@@ -166,12 +168,12 @@ public class Main extends Application {
                                 }
 
                             }
-                                createLine.addToShelfList(createShelf);
+                            createStreet.addToShelfList(createShelf);
                         } 
                     }
 
 
-                    // System.out.println(createLine);
+                    // System.out.println(createStreet);
 
                 }
             }
@@ -182,11 +184,12 @@ public class Main extends Application {
             for(int tmp = 0; tmp < allOrders.getLength(); tmp++){
                 
                 Element myElement = (Element) allOrders.item(tmp);
-                String shelf_id = myElement.getAttribute("id");
-                System.out.println(shelf_id);
+                String order_id = myElement.getAttribute("id");
 
                 
-                Order createOrder = new Order(Integer.parseInt(shelf_id));
+                String time = myElement.getElementsByTagName("start").item(0).getTextContent();
+
+                Order createOrder = new Order(Integer.parseInt(order_id), time);
 
                 NodeList goodsInsideList = myElement.getElementsByTagName("goods_type");
                 for(int inside = 0; inside < goodsInsideList.getLength(); inside++){
@@ -196,7 +199,6 @@ public class Main extends Application {
                     String itemCount = goodsElement.getTextContent();
                     
                     Goods goods = base.getGoods(goodsName);
-                    System.out.println(goodsName);
                     for (int itemCounter = 0; itemCounter < Integer.parseInt(itemCount); itemCounter++){
                         createOrder.addItemToBuy(goods);
                     }
@@ -205,6 +207,23 @@ public class Main extends Application {
                 // System.out.println(createOrder);
                 createOrder.checkFreeLastBuy();
                 base.addToOrderList(createOrder);
+            }
+
+
+            NodeList carts = doc.getElementsByTagName("carts");
+            Node cartList = carts.item(0);
+            Element cartElements = (Element) cartList;
+            NodeList allCarts = cartElements.getElementsByTagName("cart");
+            for(int tmp = 0; tmp < allCarts.getLength(); tmp++){
+                
+                Element myElement = (Element) allCarts.item(tmp);
+                String cart_id = myElement.getAttribute("id");
+                int id = Integer.parseInt(cart_id);
+
+                String x = myElement.getElementsByTagName("x").item(0).getTextContent();
+                String y = myElement.getElementsByTagName("y").item(0).getTextContent();
+                Cart createCart = new Cart(id, "red", base, new Coordinates(Double.parseDouble(x), Double.parseDouble(y)));
+                base.addToCartList(createCart);
             }
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
@@ -215,8 +234,11 @@ public class Main extends Application {
         System.out.println(base);
         
 //        Base base = mapper.readValue(new File("./data/map_base.yml"), Base.class);
+        elements.add(base.getBase());
+        elements.addAll(base.getStreetList());
         elements.addAll(base.getStopList());
-        
+        elements.addAll(base.getShelfList());
+        elements.addAll(base.getCartList());
       
         
         for (Drawable i : elements) {

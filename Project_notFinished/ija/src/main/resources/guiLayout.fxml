@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ija.ija2021.projekt.settings.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ija.ija2021.projekt.settings.MainController">
    <right>
-      <AnchorPane prefHeight="746.0" prefWidth="214.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="700.0" prefWidth="214.0" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="timeScale" layoutX="15.0" layoutY="56.0" prefHeight="19.0" prefWidth="37.0" />
             <Button layoutX="68.0" layoutY="56.0" mnemonicParsing="false" onAction="#onTimeScaleChange" prefHeight="23.0" prefWidth="117.0" text="Faster/Slower" />
@@ -27,18 +27,18 @@
          <content>
             <Group>
                <children>
-                  <Pane fx:id="map_base" layoutX="15.0" layoutY="140.0" onScroll="#doZoom" prefHeight="833.0" prefWidth="840.0" />
+                  <Pane fx:id="map_base" layoutX="15.0" layoutY="140.0" onScroll="#doZoom" prefHeight="700.0" prefWidth="840.0" />
                </children>
             </Group>
          </content>
       </ScrollPane>
    </center>
    <left>
-      <ScrollPane prefHeight="780.0" prefWidth="50.0" BorderPane.alignment="CENTER">
+      <ScrollPane prefHeight="700.0" prefWidth="250.0" BorderPane.alignment="CENTER">
          <content>
             <Group>
                <children>
-                  <Pane fx:id="line_base" prefHeight="764.0" prefWidth="291.0" />
+                  <Pane fx:id="line_base" prefHeight="700.0" prefWidth="250.0" />
                </children>
             </Group>
          </content>

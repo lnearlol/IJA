@@ -2,14 +2,14 @@ package ija.ija2021.projekt.classes;
 
 import java.util.ArrayList;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.util.StdConverter;
+// import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+// import com.fasterxml.jackson.annotation.JsonIgnore;
+// import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+// import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+// import com.fasterxml.jackson.databind.util.StdConverter;
 import ija.ija2021.projekt.settings.Drawable;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
+import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Shape;
 
 //@JsonDeserialize(converter = Stop.StopConstructor.class)
@@ -18,7 +18,6 @@ import javafx.scene.shape.Shape;
 public class Stop implements Drawable {
 	private int id;
 	private Coordinates coordinates;
-    @JsonIgnore
     private ArrayList<Shape> gui;
 	
 //    
@@ -55,8 +54,10 @@ public class Stop implements Drawable {
 	
     public void setGui()
     {
+		Ellipse stop = new Ellipse(coordinates.getX(), coordinates.getY(), 4.2f, 4.2f);
+		stop.setFill(Color.BLACK);
         gui = new ArrayList<>();
-        gui.add(new Circle(coordinates.getX(), coordinates.getY(), 6.5, Color.LIGHTGREEN ));
+        gui.add(stop);
     }
 	
 //    @Override
@@ -68,7 +69,7 @@ public class Stop implements Drawable {
 //    }
 	
     
-    @JsonIgnore
+
     @Override
     public ArrayList<Shape> getGui() {
         return gui;

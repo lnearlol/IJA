@@ -59,7 +59,7 @@ public class Coordinates {
 	
 	 @Override
 	 public String toString() {
-	     return " ( " + this.x +
+	     return " (" + this.x +
 	             ", " + this.y + ")";
 	}
 }
