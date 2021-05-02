@@ -90,7 +90,7 @@ public class Main extends Application {
 				String x = baseElement.getElementsByTagName("x").item(0).getTextContent();
 				String y = baseElement.getElementsByTagName("y").item(0).getTextContent();
 
-				base = new Base(Double.parseDouble(x), Double.parseDouble(y));
+				base = new Base(Double.parseDouble(x), Double.parseDouble(y), controller);
 				
 				
 				
@@ -149,7 +149,8 @@ public class Main extends Application {
                             String stop_y = myElement.getElementsByTagName("stop_y").item(0).getTextContent();
 
                             Shelf createShelf = new Shelf(Double.parseDouble(shelf_x), Double.parseDouble(shelf_y),
-                            Double.parseDouble(stop_x), Double.parseDouble(stop_y), Integer.parseInt(shelf_id));
+                            Double.parseDouble(stop_x), Double.parseDouble(stop_y), Integer.parseInt(shelf_id), controller);
+                            
                             base.addToStopList(createShelf.getStop());
                             base.addToShelfList(createShelf);
 
@@ -246,6 +247,8 @@ public class Main extends Application {
         }
         controller.setElements(elements);
 //        new Testovaci_trida();
+
+        controller.startClock();
         
     }
 }

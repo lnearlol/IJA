@@ -19,7 +19,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Shape;
 import javafx.scene.text.Text;
-
+import javafx.scene.text.Font;
 
 //
 import javafx.application.Platform;
@@ -37,19 +37,21 @@ public class Shelf implements Drawable  {
 	private int id;
     private ArrayList <GoodsItem> goodsShelf;
     private ArrayList <ProductInform> productInform;
-
+    private boolean isClicked = false;
     Stop stop;
     Coordinates coordinates;
+    MainController controller;
 
     private ArrayList<Shape> gui;
     
     
-    public Shelf(double x, double y, double stopX, double stopY, int id){
+    public Shelf(double x, double y, double stopX, double stopY, int id, MainController controller){
     	this.id = id;
         this.goodsShelf = new ArrayList <GoodsItem>();
         this.productInform = new ArrayList <ProductInform>();
         this.stop = new Stop(id, new Coordinates(stopX, stopY));
 
+        this.controller = controller;
         this.coordinates = new Coordinates(x, y);
         setGui();
         clickedOnShelf();
@@ -133,27 +135,56 @@ public class Shelf implements Drawable  {
 
     public void clickedOnShelf()
     {
+        // ArrayList<Drawable> UI = new ArrayList<>();
+        // UI.add(this);
+        Drawable UI = (Drawable) this;
         gui.get(0).setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             @FXML
             public void handle(MouseEvent event) {
                 System.out.println("CLICKED! = " + productInform);
-                Text text = new Text("Click on the circle to change its color"); 
-      
-      //Setting the color of the text 
-      text.setFill(Color.CRIMSON); 
-  
-      //setting the position of the text 
-      text.setX(150); 
-      text.setY(50); 
+                if(!isClicked)
+                    isClicked = true;
+                else
+                    isClicked = false;
 
-      line_base.getChildren().addAll(text);
+                String inform = "";
+                for (ProductInform element : productInform){
+                    inform = inform + element + "\n";
+                }
+
+                Text text = new Text("Shelf " + id + ":\n\n"); 
+                Text textInfo = new Text(inform);
+
+                //Setting the color of the text 
+                textInfo.setFill(Color.CRIMSON); 
+                text.setFill(Color.CRIMSON); 
+            
+                //setting the position of the text 
+                text.setX(60); 
+                text.setY(60); 
+                textInfo.setX(40); 
+                textInfo.setY(100); 
+                text.setStyle("-fx-font: 22 arial;");
+                text.setStyle("-fx-font: 18 arial;");
+
+
+                
+
+                controller.setShelfInform(text, textInfo, UI, isClicked);
             }
         });
+        // gui.get(0).setFill(Color.CRIMSON);
     }
 
 
-
+    public void changeColor(String color){
+        if (color == "blue")
+            gui.get(0).setFill(Color.BLUE);
+        else if (color == "start"){
+            gui.get(0).setFill(Color.CRIMSON);
+        }
+    }
 
     
     public String goodsInfo() {

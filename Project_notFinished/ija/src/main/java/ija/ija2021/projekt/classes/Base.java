@@ -5,6 +5,7 @@ import java.util.concurrent.Semaphore;
 
 
 import ija.ija2021.projekt.settings.Drawable;
+import ija.ija2021.projekt.settings.MainController;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
@@ -19,10 +20,11 @@ public class Base implements Drawable {
 	private ArrayList<Cart> cartList;
 	private ArrayList<Goods> goodsList;
 	private ArrayList<Buy> activeBuyList;
+	MainController controller;
 
 	private ArrayList<Shape> gui;
 	
-	public Base(double x, double y) {
+	public Base(double x, double y, MainController controller) {
 		this.coordinates = new Coordinates(x, y);
 		this.orderList = new ArrayList <Order>();
 		this.shelfList = new ArrayList <Shelf>();
@@ -31,8 +33,13 @@ public class Base implements Drawable {
 		this.goodsList = new ArrayList <Goods>();
 		this.activeBuyList = new ArrayList<Buy>();
 		this.cartList = new ArrayList<Cart>();
+		this.controller = controller;
 
 		this.setGui();
+	}
+
+	public MainController getController(){
+		return this.controller;
 	}
 
 	public void addToGoodsList(String name){

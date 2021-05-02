@@ -1,7 +1,9 @@
-
 package ija.ija2021.projekt.settings;
 
 import ija.ija2021.projekt.settings.Drawable;
+
+import ija.ija2021.projekt.classes.*;
+// import ija.ija2021.projekt.classes.*;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -43,16 +45,32 @@ public class MainController {
 
     private List<Drawable> elements = new ArrayList<>();
     private Timer timer;
+    private double timerScale = 1;
     private LocalTime time = LocalTime.of(7,59,30);
     private LocalTime maxTime = LocalTime.of(23,00,00);
-    private List<TimeUpdate> updates = new ArrayList<>();
     private DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
 
 
     @FXML
-    private void onTimeScaleChange()
-    {
-
+    private void onTimeScaleChange() {
+        try {
+            this.timerScale = Double.parseDouble(timeScale.getText());
+            if (timerScale <=0)
+            {
+                Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid timescale (should be more then 0)");
+                errorAlert.showAndWait();
+            }
+            if (timerScale > 40)
+            {
+                Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid timescaling (too big)");
+                errorAlert.showAndWait();
+            }
+            timer.cancel();
+            this.startClock();         
+        } catch (NumberFormatException e) {
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid timescaling (ERROR)");
+            errorAlert.showAndWait();
+        }
     }
     
     @FXML
@@ -76,25 +94,62 @@ public class MainController {
     @FXML
     public void setLabel (LocalTime time)
     {
-    	
+    	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        time_label.setText(time.format(formatter));
     }
     
-    public void clickOnShelf(){
+
+    public void ifSmthClicked(Drawable element, boolean isClicked){
+        for (Drawable draw : this.elements) {
+            if (draw.equals(element) && isClicked){
+                map_base.getChildren().removeAll(draw.getGui());
+                Shelf shelf = (Shelf) draw;
+                shelf.changeColor("blue");
+                map_base.getChildren().addAll(draw.getGui());
+            } else if (draw instanceof Shelf) {
+                map_base.getChildren().removeAll(draw.getGui());
+                Shelf shelf = (Shelf) draw;
+                shelf.changeColor("start");
+                map_base.getChildren().addAll(draw.getGui());    
+            }
+        }
+    }
+
+
+    public void setShelfInform(Text text, Text textInfo, Drawable element, boolean isClicked) {
+        this.deleteLeftInfopane();
+        this.ifSmthClicked(element, isClicked);
+
+        if(isClicked){
+            line_base.getChildren().add(text);
+            line_base.getChildren().add(textInfo);
+        }
+        // addElementToScene(this.changed);
         
-        Text text = new Text("Click on the circle to change its color"); 
-      
-      //Setting the font of the text 
-      text.setFont(Font.font(null, FontWeight.BOLD, 15));     
-      
-      //Setting the color of the text 
-      text.setFill(Color.CRIMSON); 
-  
-      //setting the position of the text 
-      text.setX(150); 
-      text.setY(50); 
+    }
 
-      line_base.getChildren().addAll(text);
 
+
+    public void deleteLeftInfopane()
+    {
+        
+        // map_base.getChildren().remove(this.changed);
+        line_base.getChildren().removeAll(line_base.getChildren());
+        
+
+    }
+
+    
+    public void cartsRun(){
+        for(Drawable cartIcon : this.elements){
+            if(cartIcon instanceof Cart){
+                Cart cart = (Cart) cartIcon;
+                // map_base.getChildren().removeAll(cartIcon.getGui());
+                // System.out.println(cart.getCoordinates());
+                // cart.move(10, 0);
+                // map_base.getChildren().addAll(cartIcon.getGui());
+            }
+        }
     }
 
     public void addElementToScene(Drawable element)
@@ -112,7 +167,20 @@ public class MainController {
     }
 
 
+    public void startClock() {
+                // creating timer task, timer  
+        this.timer = new Timer(false);  
+        TimerTask timerTask = new TimerTask() {  
+            @Override  
+            public void run() {  
+                Platform.runLater(()->{setLabel(time);});
+                long scaling = 10 * (long) timerScale;
+                time = time.plusSeconds(scaling);
 
-    
-    
+                cartsRun();
+
+            };  
+        };  
+        this.timer.scheduleAtFixedRate(timerTask, 500, 1000);    
+    } 
 }

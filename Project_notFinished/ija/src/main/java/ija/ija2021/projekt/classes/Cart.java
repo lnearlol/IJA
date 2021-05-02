@@ -60,6 +60,10 @@ public class Cart extends Thread implements Drawable {
 	public void makeBusy() {
 		this.isFree = false;
 	}
+
+	public Coordinates getCoordinates(){
+		return this.coordinates;
+	}
 	
 	public void move(double x, double y) {
 		this.coordinates.setX(this.coordinates.getX() + x);
