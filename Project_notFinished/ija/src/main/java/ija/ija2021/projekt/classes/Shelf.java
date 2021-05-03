@@ -129,7 +129,9 @@ public class Shelf implements Drawable  {
 
 
 
-
+    public void setClicked(boolean set){
+        this.isClicked = set;
+    }
 
 
 

@@ -24,11 +24,11 @@ public class Coordinates {
 	}
 	
 	public void setX(double x) {
-		this.x = this.x + x;
+		this.x = x;
 	}
 	
 	public void setY(double y) {
-		this.y = this.y + y;
+		this.y = y;
 	}
 	
 	public double distanse(double x, double y) {

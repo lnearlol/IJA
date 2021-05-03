@@ -68,6 +68,7 @@ public class Cart extends Thread implements Drawable {
 	public void move(double x, double y) {
 		this.coordinates.setX(this.coordinates.getX() + x);
 		this.coordinates.setY(this.coordinates.getY() + y);
+		this.setGui();
 	}
 	
 	public void addItemToList(GoodsItem item) {

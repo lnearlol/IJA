@@ -49,15 +49,15 @@ public class MainController {
     private LocalTime time = LocalTime.of(7,59,30);
     private LocalTime maxTime = LocalTime.of(23,00,00);
     private DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
-
+    private long scaling = 1;
 
     @FXML
     private void onTimeScaleChange() {
         try {
             this.timerScale = Double.parseDouble(timeScale.getText());
-            if (timerScale <=0)
+            if (timerScale <=1)
             {
-                Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid timescale (should be more then 0)");
+                Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid timescale (should be more then 1)");
                 errorAlert.showAndWait();
             }
             if (timerScale > 40)
@@ -110,6 +110,7 @@ public class MainController {
                 map_base.getChildren().removeAll(draw.getGui());
                 Shelf shelf = (Shelf) draw;
                 shelf.changeColor("start");
+                shelf.setClicked(false);
                 map_base.getChildren().addAll(draw.getGui());    
             }
         }
@@ -139,15 +140,23 @@ public class MainController {
 
     }
 
-    
+    double direction = 1;
     public void cartsRun(){
         for(Drawable cartIcon : this.elements){
             if(cartIcon instanceof Cart){
+                map_base.getChildren().removeAll(cartIcon.getGui());
                 Cart cart = (Cart) cartIcon;
-                // map_base.getChildren().removeAll(cartIcon.getGui());
                 // System.out.println(cart.getCoordinates());
-                // cart.move(10, 0);
-                // map_base.getChildren().addAll(cartIcon.getGui());
+                
+                // System.out.println(cart.getCoordinates());
+                
+                if(cart.getCoordinates().getX() > 300)
+                    direction = -1;
+                else if (cart.getCoordinates().getX() < 100)
+                    direction = 1;
+                
+                cart.move(direction, 0);
+                map_base.getChildren().addAll(cartIcon.getGui());
             }
         }
     }
@@ -169,18 +178,18 @@ public class MainController {
 
     public void startClock() {
                 // creating timer task, timer  
-        this.timer = new Timer(false);  
+        this.timer = new Timer();  
         TimerTask timerTask = new TimerTask() {  
             @Override  
             public void run() {  
                 Platform.runLater(()->{setLabel(time);});
-                long scaling = 10 * (long) timerScale;
+                scaling = 2 * (long) timerScale;
                 time = time.plusSeconds(scaling);
-
-                cartsRun();
-
+                
+                Platform.runLater(()->{
+                cartsRun();});
             };  
         };  
-        this.timer.scheduleAtFixedRate(timerTask, 500, 1000);    
+        this.timer.scheduleAtFixedRate(timerTask, 0, (long) 100/scaling);    
     } 
 }
