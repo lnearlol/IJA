@@ -24,7 +24,17 @@ public class Street implements Drawable {
 		this.setGui();
 	}
 
-	
+	public int getId(){
+		return this.id;
+	}
+
+	public Coordinates getStartCoordinates(){
+		return this.begin;
+	}
+
+	public Coordinates getEndCoordinates(){
+		return this.end;
+	}
 	
 	public void addToShelfList(Shelf shelf) {
 		if (shelf != null)
@@ -36,6 +46,9 @@ public class Street implements Drawable {
 	}
 	
 	public boolean isOnStreet(Coordinates pos) {
+		// System.out.println(this.id + ":  IS ON STREET pos: " + pos);
+		// System.out.println(this.id + ": street start" + this.begin);
+		// System.out.println(this.id + ": street end" + this.end + "\n");
 		if(this.begin.getX() == this.end.getX() && this.begin.getX() == pos.getX()){
 			if (this.begin.getY() < this.end.getY()) {
 				if (pos.getY() <= this.end.getY() && pos.getY() >= this.begin.getY()) {

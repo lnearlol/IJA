@@ -114,7 +114,27 @@ public class Base implements Drawable {
 //		return this.shelfList;
 //	}
 	
-	
+
+    public Coordinates getFirstStreetPosition(){
+		for(Street firstStreet: this.streetList){
+			if(firstStreet.getId() == 1)
+				return firstStreet.getStartCoordinates();
+		}
+		return null;
+	}
+
+	public boolean isOnStreet(Coordinates cords){
+		for(Street street: this.streetList){
+			if (street.isOnStreet(cords))
+				return true;
+		}
+		return false;
+	}
+
+	public void getTime(String time){
+		
+	}
+
 	// ---------------------
     public void addStreet(Street street) {
         this.streetList.add(street);

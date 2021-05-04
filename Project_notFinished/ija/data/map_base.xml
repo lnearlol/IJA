@@ -7,7 +7,7 @@
 
 <!-- // regal -> 399.6, 53.2, zastavka -> 413.6f, 39.9f -> shelf = stop (x  -14, y + 13.3)  -->
 <!-- new shelf -> (x+26.6) -->
-
+<!-- HLAVNI ULICE VZDICKY ID = 1 -->
     <street id="1">
         <start_x>95</start_x>
         <start_y>200</start_y>

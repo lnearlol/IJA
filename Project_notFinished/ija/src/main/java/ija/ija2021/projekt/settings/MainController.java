@@ -50,14 +50,15 @@ public class MainController {
     private LocalTime maxTime = LocalTime.of(23,00,00);
     private DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
     private long scaling = 1;
+    private Base base;
 
     @FXML
     private void onTimeScaleChange() {
         try {
             this.timerScale = Double.parseDouble(timeScale.getText());
-            if (timerScale <=1)
+            if (timerScale < 1)
             {
-                Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid timescale (should be more then 1)");
+                Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid timescale (should be 1 and more)");
                 errorAlert.showAndWait();
             }
             if (timerScale > 40)
@@ -137,10 +138,14 @@ public class MainController {
         // map_base.getChildren().remove(this.changed);
         line_base.getChildren().removeAll(line_base.getChildren());
         
-
     }
 
-    double direction = 1;
+    public void addBase(Base base){
+        this.base = base;
+    }
+
+    // double direction = 1;
+    @FXML
     public void cartsRun(){
         for(Drawable cartIcon : this.elements){
             if(cartIcon instanceof Cart){
@@ -150,15 +155,70 @@ public class MainController {
                 
                 // System.out.println(cart.getCoordinates());
                 
-                if(cart.getCoordinates().getX() > 300)
-                    direction = -1;
-                else if (cart.getCoordinates().getX() < 100)
-                    direction = 1;
+                // if(cart.getCoordinates().getX() > 300)
+                //     direction = -1;
+                // else if (cart.getCoordinates().getX() < 100)
+                //     direction = 1;
                 
-                cart.move(direction, 0);
+                this.base.giveTime(time_label.getText());
+
+                if(compareTime(time_label.getText(), "08:00:34") > 0){
+                    ArrayList<Shelf> shelves = base.getShelfList();
+                    ArrayList<Cart> carts = base.getCartList();
+                    if(carts.get(0).ifShouldReturn()){
+                        for(Shelf shelf : shelves){
+                            carts.get(0).shelfRouteAdd(shelf);
+                        }
+                        carts.get(0).makeBusy();
+                        System.out.println("TIME IS UP END");
+                    }
+                }
+
+
+                if(compareTime(time_label.getText(), "08:06:34") > 0){
+                    ArrayList<Shelf> shelves = base.getShelfList();
+                    ArrayList<Cart> carts = base.getCartList();
+                    if(carts.get(1).ifShouldReturn()){
+                        for(Shelf shelf : shelves){
+                            carts.get(1).shelfRouteAdd(shelf);
+                        }
+                        carts.get(1).makeBusy();
+                        System.out.println("TIME IS UP END");
+                    }
+                    
+                }
+
+                if(compareTime(time_label.getText(), "08:15:34") > 0){
+                    ArrayList<Shelf> shelves = base.getShelfList();
+                    ArrayList<Cart> carts = base.getCartList();
+                    if(carts.get(2).ifShouldReturn()){
+                        for(Shelf shelf : shelves){
+                            carts.get(2).shelfRouteAdd(shelf);
+                        }
+                        carts.get(2).makeBusy();
+                        System.out.println("TIME IS UP END");
+                    }
+                    
+                }
+
+
+                cart.run();
                 map_base.getChildren().addAll(cartIcon.getGui());
             }
         }
+    }
+
+    public int compareTime(String str1, String str2){
+        int time1, time2;
+        for(int i = 0; i < 9; i+=3){
+            time1 = Integer.parseInt(str1.substring(i, i+2));
+            time2 = Integer.parseInt(str2.substring(i, i+2));
+            if (time1 > time2)
+                return 1;
+            else if (time1 < time2)
+                return -1;
+        }
+        return 0;
     }
 
     public void addElementToScene(Drawable element)

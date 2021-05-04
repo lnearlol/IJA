@@ -240,7 +240,8 @@ public class Main extends Application {
         elements.addAll(base.getStopList());
         elements.addAll(base.getShelfList());
         elements.addAll(base.getCartList());
-      
+        
+        controller.addBase(base);
         
         for (Drawable i : elements) {
         	// System.out.println("hi");
