@@ -109,6 +109,17 @@ public class Shelf implements Drawable  {
                 break;
             }
         }
+
+        for(ProductInform product : this.productInform){
+            if(goods.getName() == product.getName()){
+                if (!product.minusAmount()){
+                    Rectangle shelf = new Rectangle(this.coordinates.getX(), this.coordinates.getY(), 26.6, 26.6);
+                    shelf.setFill(Color.BLACK);     
+                    gui = new ArrayList<>();
+                    gui.add(shelf);
+                }
+            }
+        }
         return tmp;
     }
 

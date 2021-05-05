@@ -31,8 +31,12 @@ public class Coordinates {
 		this.y = y;
 	}
 	
-	public double distanse(double x, double y) {
-		return Math.abs(this.x - x) + Math.abs(this.y - y);
+	// public double distanse(double x, double y) {
+	// 	return Math.abs(this.x - x) + Math.abs(this.y - y);
+	// }
+
+	public double getDistanceBetweenCoordinates(Coordinates cord){
+		return Math.sqrt(Math.pow(this.x - cord.getX(), 2) +  Math.pow(this.y - cord.getY(), 2));
 	}
 	
 	

@@ -131,13 +131,13 @@
 
     <orders>
         <order id = "1">
-            <start>09:30:10</start>
+            <start>08:00:30</start>
             <goods_type name="table">5</goods_type>
             <goods_type name="keyboard">20</goods_type>
         </order>
 
         <order id = "2">
-            <start>09:32:10</start>
+            <start>08:00:59</start>
             <goods_type name="shelf">12</goods_type>
             <goods_type name="chair">45</goods_type>
         </order>

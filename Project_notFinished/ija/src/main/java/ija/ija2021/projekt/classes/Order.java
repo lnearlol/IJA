@@ -16,19 +16,20 @@ public class Order {
 	SimpleDateFormat parser;
 	Date startTime;
 	String printTime;
+	private Boolean used;
 	private ArrayList <Integer> allBuyId;
 
 	public Order(int id, String time) {
 		this.id = id;
 		this.buyId = 1;
-
+		this.used = false;
+		
 		this.buyList = new ArrayList<Buy>();
 		this.itemList = new ArrayList<GoodsItem>();
 		this.allBuyId = new ArrayList<Integer>();
 		this.parser = new SimpleDateFormat("HH:mm:ss");
 		try {
 			this.startTime = parser.parse(time);
-
 
 			// 				DATE PRINT  HH:mm:ss
 			this.printTime = parser.format(this.startTime);
@@ -46,10 +47,29 @@ public class Order {
 
 	}
 	
+	public String getTime(){
+		return printTime;
+	}
+
+	public int getId(){
+		return this.id;
+	}
+
 	public void addItemToBuy(Goods goods) {
 		GoodsItem incomeItem = new GoodsItem(goods, LocalDate.now());
 		this.itemList.add(incomeItem);
 		addSlots(incomeItem);
+	}
+
+	public void setUsedTrue(){
+		this.used = true;
+	}
+
+	public boolean ifUsed(){
+		if(this.used)
+			return true;
+		 else
+			return false;
 	}
 
 	public void addSlots(GoodsItem incomeItem){
@@ -128,6 +148,10 @@ public class Order {
 			return null;
 		
 		return this.buyList.get(0);
+	}
+
+	public ArrayList<Buy> getBuyList(){
+		return this.buyList;
 	}
 	
 	public void removeBuy(Buy buy) {

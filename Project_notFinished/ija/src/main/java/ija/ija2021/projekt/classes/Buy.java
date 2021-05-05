@@ -29,6 +29,10 @@ public class Buy {
 		// 	System.out.println("********************** ");
 	}
 
+	public List<GoodsItem> getItemList(){
+		return Arrays.asList(this.buy);
+	}
+
 	public void addNamesAndCounts(){
 		if(buy[0] == null){
 			System.out.println("ERROR  BUY [0] IS NULL!");

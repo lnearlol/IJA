@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 
-
+import ija.ija2021.projekt.classes.*;
 import ija.ija2021.projekt.settings.Drawable;
 import ija.ija2021.projekt.settings.MainController;
 import javafx.scene.paint.Color;
@@ -19,14 +19,18 @@ public class Base implements Drawable {
 	private ArrayList<Street> streetList;
 	private ArrayList<Cart> cartList;
 	private ArrayList<Goods> goodsList;
+	private ArrayList<Order> addedOrderList;
 	private ArrayList<Buy> activeBuyList;
+
 	MainController controller;
 
 	private ArrayList<Shape> gui;
 	
 	public Base(double x, double y, MainController controller) {
 		this.coordinates = new Coordinates(x, y);
+
 		this.orderList = new ArrayList <Order>();
+		this.addedOrderList = new ArrayList <Order>();
 		this.shelfList = new ArrayList <Shelf>();
 		this.stopList = new ArrayList <Stop>();
 		this.streetList = new ArrayList <Street>();
@@ -80,14 +84,14 @@ public class Base implements Drawable {
 	}
 	
 
-	public void addToActiveBuyList(Buy buy){
-		this.activeBuyList.add(buy);
+	public void addToActiveBuyList(ArrayList <Buy> buyList){
+		this.activeBuyList.addAll(buyList);
 	}
 
 
-	public void removeFromOrderList(Order order) {
-		this.orderList.remove(order);
-	}
+	// public void removeFromOrderList(Order order) {
+	// 	this.orderList.remove(order);
+	// }
 	
 	
 	public void addToStopList(Stop stop) {
@@ -102,8 +106,16 @@ public class Base implements Drawable {
 		return this;
 	}
 
-	public Order getOrder() {
-		return this.orderList.get(0);
+	// public Order getOrder(Order order) {
+	// 	if (order != null)
+	// 		return this.orderList.get(order);
+	// 	else 
+	// 		return null;
+	// }
+
+	public void removeOrder(Order order) {
+		if(order != null)
+			this.orderList.remove(order);
 	}
 	
 	public void addShelf(Shelf shelf) {
@@ -131,8 +143,55 @@ public class Base implements Drawable {
 		return false;
 	}
 
-	public void getTime(String time){
+	public int compareTime(String str1, String str2){
+        int time1, time2;
+        for(int i = 0; i < 9; i+=3){
+            time1 = Integer.parseInt(str1.substring(i, i+2));
+            time2 = Integer.parseInt(str2.substring(i, i+2));
+            if (time1 > time2)
+                return 1;
+            else if (time1 < time2)
+                return -1;
+        }
+        return 0;
+    }
+
+	public void sendTime(String time){
+		System.out.println("im here");
+		// System.out.println(this.orderList);
+		if(this.orderList.isEmpty())
+			return;
+
+		ArrayList <Order> orderRemove = new ArrayList <Order>();
+		for (Order findOrder:this.orderList){
+			if(compareTime(findOrder.getTime(), time) < 0 && !findOrder.ifUsed()){
+				System.out.println("Check orders: "+findOrder.getId());
+				this.addedOrderList.add(findOrder);
+				orderRemove.add(findOrder);
+				this.addToActiveBuyList(findOrder.getBuyList());
+				findOrder.setUsedTrue();
+			}
+		} 
+
+
+		this.orderList.removeAll(orderRemove);
 		
+
+		if(!this.activeBuyList.isEmpty()){
+			System.out.println("Check buy list");
+			for(Cart cart : this.cartList){
+				if(cart.isFree()){
+					cart.addBuy(this.activeBuyList.get(0));
+					this.activeBuyList.remove(0);
+					cart.ShortestWayShelf();
+				}
+			}
+		}
+
+		// System.out.println("carts run");
+		// for(Cart cart : this.cartList){
+		// 	cart.run();
+		// }
 	}
 
 	// ---------------------

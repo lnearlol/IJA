@@ -22,6 +22,15 @@ public class ProductInform {
         return this.goodsAmount;
     }
 
+    public boolean minusAmount(){
+        if(this.goodsAmount >= 0){
+            this.goodsAmount -= 1;
+            return true;
+        }
+
+        return false;
+    }
+
     @Override
     public String toString(){
         return this.goodsName + " : " + this.goodsAmount + "\n";
