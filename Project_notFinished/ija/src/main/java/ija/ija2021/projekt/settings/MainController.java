@@ -3,6 +3,7 @@ package ija.ija2021.projekt.settings;
 import ija.ija2021.projekt.settings.Drawable;
 
 import ija.ija2021.projekt.classes.*;
+import ija.ija2021.projekt.Main;
 // import ija.ija2021.projekt.classes.*;
 
 import javafx.application.Platform;
@@ -50,6 +51,7 @@ public class MainController {
     private LocalTime maxTime = LocalTime.of(23,00,00);
     private DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
     private long scaling = 1;
+    private Main main;
     private Base base;
 
     @FXML
@@ -73,11 +75,15 @@ public class MainController {
             errorAlert.showAndWait();
         }
     }
+
+
     
     @FXML
     private void onResetTime()
     {
-    
+        time = LocalTime.of(7,59,30);
+        timer.cancel();
+        main.startTime(this);
     }
        
     @FXML
@@ -102,17 +108,35 @@ public class MainController {
 
     public void ifSmthClicked(Drawable element, boolean isClicked){
         for (Drawable draw : this.elements) {
-            if (draw.equals(element) && isClicked){
-                map_base.getChildren().removeAll(draw.getGui());
+            if (draw.equals(element) && isClicked && draw instanceof Shelf){
+                // map_base.getChildren().removeAll(draw.getGui());
                 Shelf shelf = (Shelf) draw;
                 shelf.changeColor("blue");
-                map_base.getChildren().addAll(draw.getGui());
+                // map_base.getChildren().addAll(draw.getGui());
             } else if (draw instanceof Shelf) {
-                map_base.getChildren().removeAll(draw.getGui());
+                // map_base.getChildren().removeAll(draw.getGui());
                 Shelf shelf = (Shelf) draw;
                 shelf.changeColor("start");
                 shelf.setClicked(false);
-                map_base.getChildren().addAll(draw.getGui());    
+                // map_base.getChildren().addAll(draw.getGui());    
+            } else if(draw.equals(element) && isClicked && draw instanceof Base){
+                // map_base.getChildren().removeAll(draw.getGui());
+                Base base = (Base) draw;
+                base.changeColor("blue");
+                // map_base.getChildren().addAll(draw.getGui());
+            }  else if (draw instanceof Base){
+                // map_base.getChildren().removeAll(draw.getGui());
+                Base base = (Base) draw;
+                base.changeColor("start");
+                base.setClicked(false);
+                // map_base.getChildren().addAll(draw.getGui());
+            } else if (draw instanceof Street){
+                Street street = (Street) draw;
+                if(street.isClicked()){
+                    street.changeColor("blue");
+                } else {
+                    street.changeColor("start");
+                }
             }
         }
     }
@@ -127,7 +151,6 @@ public class MainController {
             line_base.getChildren().add(textInfo);
         }
         // addElementToScene(this.changed);
-        
     }
 
 
@@ -142,6 +165,10 @@ public class MainController {
 
     public void addBase(Base base){
         this.base = base;
+    }
+
+    public void addMain(Main main){
+        this.main = main;
     }
 
     // double direction = 1;

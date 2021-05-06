@@ -18,12 +18,15 @@ public class Order {
 	String printTime;
 	private Boolean used;
 	private ArrayList <Integer> allBuyId;
+	private ArrayList <ProductInform> productInform;
+
 
 	public Order(int id, String time) {
 		this.id = id;
 		this.buyId = 1;
 		this.used = false;
 		
+		this.productInform = new ArrayList <ProductInform>();
 		this.buyList = new ArrayList<Buy>();
 		this.itemList = new ArrayList<GoodsItem>();
 		this.allBuyId = new ArrayList<Integer>();
@@ -129,6 +132,15 @@ public class Order {
 		// 	System.out.println("LAST BUY WAS FREE ----------");
 		// }
 	}
+
+
+	public void addToProductInform(ProductInform product){
+        this.productInform.add(product);
+    }
+
+    public ArrayList<ProductInform> getProductInform(){
+        return this.productInform;
+    }
 	
 	public void printInfo(){
 		
@@ -156,6 +168,17 @@ public class Order {
 	
 	public void removeBuy(Buy buy) {
 		this.buyList.remove(buy);
+	}
+
+	public String printProducInform(){
+		String info = "";
+		for (ProductInform product : this.productInform){
+			info += product;
+		}
+
+		return "Order {\nOrder ID = "+ this.id + ",\n" + 
+		"Start time = " + this.printTime + ",\n" +
+		info +  "}\n\n";
 	}
 
 	@Override

@@ -56,6 +56,11 @@ public class Main extends Application {
         
 
         MainController controller = loader.getController();
+        controller.addMain(this);
+        this.startTime(controller);
+    }
+
+    public void startTime(MainController controller){
         ArrayList<Drawable> elements = new ArrayList<>();
         Base base = null;
 //        YAMLFactory map_base = new YAMLFactory().disable(YAMLGenerator.Feature.WRITE_DOC_START_MARKER);
@@ -134,7 +139,7 @@ public class Main extends Application {
                     
 
                     Street createStreet = new Street(Double.parseDouble(start_x), Double.parseDouble(start_y), 
-                    Double.parseDouble(end_x), Double.parseDouble(end_y), Integer.parseInt(id));
+                    Double.parseDouble(end_x), Double.parseDouble(end_y), Integer.parseInt(id), controller);
                     base.addStreet(createStreet);
                     NodeList childList =  element.getChildNodes();
                     for(int tmp = 0; tmp < childList.getLength(); tmp++) {
@@ -199,6 +204,7 @@ public class Main extends Application {
                     String goodsName = goodsElement.getAttribute("name");
                     String itemCount = goodsElement.getTextContent();
                     
+                    createOrder.addToProductInform(new ProductInform(goodsName, Integer.parseInt(itemCount)));
                     Goods goods = base.getGoods(goodsName);
                     for (int itemCounter = 0; itemCounter < Integer.parseInt(itemCount); itemCounter++){
                         createOrder.addItemToBuy(goods);
@@ -250,7 +256,6 @@ public class Main extends Application {
 //        new Testovaci_trida();
 
         controller.startClock();
-        
     }
 }
 

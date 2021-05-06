@@ -77,9 +77,9 @@ public class Shelf implements Drawable  {
         return this.productInform;
     }
 
-    void printProductInform(){
+    // void printProductInform(){
         
-    }
+    // }
 
     public void put(GoodsItem goodsItem) {
         goodsShelf.add(goodsItem);
@@ -146,8 +146,7 @@ public class Shelf implements Drawable  {
 
 
 
-    public void clickedOnShelf()
-    {
+    public void clickedOnShelf() {
         // ArrayList<Drawable> UI = new ArrayList<>();
         // UI.add(this);
         Drawable UI = (Drawable) this;
@@ -180,9 +179,6 @@ public class Shelf implements Drawable  {
                 textInfo.setY(100); 
                 text.setStyle("-fx-font: 22 arial;");
                 text.setStyle("-fx-font: 18 arial;");
-
-
-                
 
                 controller.setShelfInform(text, textInfo, UI, isClicked);
             }

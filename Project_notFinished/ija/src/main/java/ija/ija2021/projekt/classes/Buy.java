@@ -29,8 +29,15 @@ public class Buy {
 		// 	System.out.println("********************** ");
 	}
 
-	public List<GoodsItem> getItemList(){
-		return Arrays.asList(this.buy);
+	public ArrayList<GoodsItem> getItemList(){
+		ArrayList<GoodsItem> newList = new ArrayList<GoodsItem>();
+		for(int i = 0; i < 5; i++){
+			if(this.buy[i] != null){
+				newList.add(buy[i]);
+			}
+		}
+		return newList;
+
 	}
 
 	public void addNamesAndCounts(){

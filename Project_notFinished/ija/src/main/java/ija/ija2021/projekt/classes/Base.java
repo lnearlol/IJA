@@ -6,10 +6,15 @@ import java.util.concurrent.Semaphore;
 import ija.ija2021.projekt.classes.*;
 import ija.ija2021.projekt.settings.Drawable;
 import ija.ija2021.projekt.settings.MainController;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Shape;
 
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Shape;
+import javafx.scene.text.Text;
+import javafx.scene.text.Font;
 
 public class Base implements Drawable {
 	private Coordinates coordinates;	
@@ -22,6 +27,7 @@ public class Base implements Drawable {
 	private ArrayList<Order> addedOrderList;
 	private ArrayList<Buy> activeBuyList;
 
+	private boolean isClicked;
 	MainController controller;
 
 	private ArrayList<Shape> gui;
@@ -38,8 +44,10 @@ public class Base implements Drawable {
 		this.activeBuyList = new ArrayList<Buy>();
 		this.cartList = new ArrayList<Cart>();
 		this.controller = controller;
+		this.isClicked = false;
 
 		this.setGui();
+		this.clickedOnBase();
 	}
 
 	public MainController getController(){
@@ -135,12 +143,12 @@ public class Base implements Drawable {
 		return null;
 	}
 
-	public boolean isOnStreet(Coordinates cords){
+	public Street isOnStreet(Coordinates cords){
 		for(Street street: this.streetList){
 			if (street.isOnStreet(cords))
-				return true;
+				return street;
 		}
-		return false;
+		return null;
 	}
 
 	public int compareTime(String str1, String str2){
@@ -223,6 +231,68 @@ public class Base implements Drawable {
         return this.cartList;  
     }
     
+	public void setClicked(boolean set){
+        this.isClicked = set;
+    }
+
+	public void changeColor(String color){
+        if (color == "blue")
+            gui.get(0).setFill(Color.MEDIUMSLATEBLUE);
+        else if (color == "start"){
+            gui.get(0).setFill(Color.DODGERBLUE);
+        }
+    }
+
+	public void clickedOnBase() {
+        Drawable UI = (Drawable) this;
+        gui.get(0).setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            @FXML
+            public void handle(MouseEvent event) {
+                if(!isClicked)
+                    isClicked = true;
+                else
+                    isClicked = false;
+
+				String	inform = "Zpracovane:\n\n";
+				if(addedOrderList.isEmpty())
+					inform += "prazdny\n";
+				else {
+					for (Order order : addedOrderList){
+						inform += order.printProducInform();
+					}
+				}
+
+                inform += "\nNe zpracovane:\n\n";
+				if(orderList.isEmpty())
+					inform += "prazdny\n";
+				else {
+					for (Order order : orderList){
+						inform += order.printProducInform();
+					}
+				}
+
+                Text text = new Text("Base "+ ":\n\n"); 
+                Text textInfo = new Text(inform);
+
+                //Setting the color of the text 
+                textInfo.setFill(Color.CRIMSON); 
+                text.setFill(Color.CRIMSON); 
+            
+                //setting the position of the text 
+                text.setX(60); 
+                text.setY(60); 
+                textInfo.setX(40); 
+                textInfo.setY(100); 
+                text.setStyle("-fx-font: 22 arial;");
+                text.setStyle("-fx-font: 18 arial;");
+				
+                controller.setShelfInform(text, textInfo, UI, isClicked);
+            }
+        });
+        // gui.get(0).setFill(Color.CRIMSON);
+    }
+
 	public String streetsInfo(){
 		String str = "";
 		int count = 0;

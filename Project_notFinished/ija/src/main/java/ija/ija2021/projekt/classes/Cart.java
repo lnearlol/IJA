@@ -264,7 +264,11 @@ public class Cart extends Thread implements Drawable {
 		Coordinates returnCoordinates = null;
 		double distance;
 
-		if(base.isOnStreet(north) && ! north.equals(this.previousCoordinates)){
+		if(base.isOnStreet(this.coordinates).isClicked()){
+			return this.coordinates;
+		}
+
+		if(base.isOnStreet(north) != null && ! north.equals(this.previousCoordinates)){
 			distance = targetCoordinates.getDistanceBetweenCoordinates(north);
 			if(distance < shortest){
 				shortest = distance;
@@ -272,7 +276,7 @@ public class Cart extends Thread implements Drawable {
 				// System.out.println("returnCord : NORTH " + north);
 			}
 		}
-		if(base.isOnStreet(south) && ! south.equals(this.previousCoordinates)){
+		if(base.isOnStreet(south) != null && ! south.equals(this.previousCoordinates)){
 			distance = targetCoordinates.getDistanceBetweenCoordinates(south);
 			if(distance < shortest){
 				shortest = distance;
@@ -280,7 +284,7 @@ public class Cart extends Thread implements Drawable {
 				// System.out.println("returnCord : SOUTH " + south);
 			}
 		}
-		if(base.isOnStreet(east) && ! east.equals(this.previousCoordinates)){
+		if(base.isOnStreet(east) != null && ! east.equals(this.previousCoordinates)){
 			distance = targetCoordinates.getDistanceBetweenCoordinates(east);
 			if(distance < shortest){
 				shortest = distance;
@@ -288,7 +292,7 @@ public class Cart extends Thread implements Drawable {
 				// System.out.println("returnCord : EAST " + east);
 			}
 		}
-		if(base.isOnStreet(west) && ! west.equals(this.previousCoordinates)){
+		if(base.isOnStreet(west) != null && ! west.equals(this.previousCoordinates)){
 			distance = targetCoordinates.getDistanceBetweenCoordinates(west);
 			if(distance < shortest){
 				shortest = distance;
@@ -309,10 +313,14 @@ public class Cart extends Thread implements Drawable {
 	}
 
 	public void goToBase(){
+		System.out.println("++++++ goToBase FUNCTION");
 		if(this.coordinates.equals(base.getFirstStreetPosition())){
+			System.out.println("++++++ goToBase if");
+			// System.out.println("goToStop if");
 			this.move(this.startCoordinates.getX(), this.startCoordinates.getY());
 			this.makeFree();
 		} else {
+			System.out.println("++++++ goToBase else");
 			Coordinates cords = this.FindShortestWay(base.getFirstStreetPosition());
 			this.move(cords.getX(), cords.getY());
 		}
@@ -383,8 +391,9 @@ public class Cart extends Thread implements Drawable {
 				this.timeOnStop = 0;
 				this.previousCoordinates.setX(-1);
 				this.previousCoordinates.setY(-1);
-			}
+			} else {
 				System.out.println("Got else cart " + this.id + " status: " + isFree() + " timeonStop " + this.timeOnStop);
+			}
 		}
 	}
 
