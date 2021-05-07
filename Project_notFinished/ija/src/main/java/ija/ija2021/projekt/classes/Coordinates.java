@@ -43,14 +43,14 @@ public class Coordinates {
     @Override
     public boolean equals(Object coordinates){
         Coordinates tmp1 = (Coordinates) coordinates;
-		System.out.println("1 -" + this.toString() +"\n2 - " + tmp1);
+		// System.out.println("1 -" + this.toString() +"\n2 - " + tmp1);
         if (this == coordinates)
             return true;
         else if (coordinates == null)
             return false;
         else if (coordinates instanceof Coordinates){
             Coordinates tmp = (Coordinates) coordinates;
-			System.out.println("1 -" + this.toString() +"\n2 - " + tmp);
+			// System.out.println("1 -" + this.toString() +"\n2 - " + tmp);
             if(Math.round(tmp.getX()) == Math.round(this.x) && Math.round(tmp.getY()) == Math.round(this.y)){
                 return true;
             }

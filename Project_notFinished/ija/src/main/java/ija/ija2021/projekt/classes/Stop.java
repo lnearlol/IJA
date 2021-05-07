@@ -19,6 +19,7 @@ public class Stop implements Drawable {
 	private int id;
 	private Coordinates coordinates;
     private ArrayList<Shape> gui;
+	Shelf shelf;
 	
 //    
 //    /**
@@ -27,9 +28,10 @@ public class Stop implements Drawable {
 //    public Stop() {
 //    }
     
-	public Stop (int id, Coordinates coordinates) {
+	public Stop (int id, Coordinates coordinates, Shelf shelf) {
 		this.id = id;
     	this.coordinates = coordinates;
+		this.shelf = shelf;
     	setGui();
 	}
 	
@@ -41,6 +43,9 @@ public class Stop implements Drawable {
 		return this;
 	}
 	
+	public Shelf getSHelf(){
+		return this.shelf;
+	}
 	
 	public int getId() {
     	return this.id;

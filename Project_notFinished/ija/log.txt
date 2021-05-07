@@ -1,4 +1,0 @@
-Buildfile: /mnt/c/Users/near/Desktop/IJA/ija/ija/build.xml
-
-clean:
-   [delete] Deleting directory /mnt/c/Users/near/Desktop/IJA/ija/ija/build

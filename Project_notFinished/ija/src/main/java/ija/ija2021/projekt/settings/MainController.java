@@ -42,7 +42,9 @@ public class MainController {
     @FXML
     private Label time_label;
     @FXML
-    private TextField timeChange;
+    private TextField orderName;
+    @FXML
+    private TextField orderQuantity;
 
     private List<Drawable> elements = new ArrayList<>();
     private Timer timer;
@@ -79,34 +81,61 @@ public class MainController {
 
     
     @FXML
-    private void onResetTime()
-    {
+    private void onResetTime() {
         time = LocalTime.of(7,59,30);
         timer.cancel();
         main.startTime(this);
     }
+
+    @FXML
+    private void onAddingOrder() {
+        String name = orderName.getText();
+        String quantity = orderQuantity.getText();
+        int id = 1; 
+        if(base.getOrderList() != null && !base.getOrderList().isEmpty()){
+            id = base.getOrderList().get(base.getOrderList().size() - 1).getId() + 1;
+        }
+        Order createOrder = new Order(id, time_label.getText());
+        try{
+            createOrder.addToProductInform(new ProductInform(name, Integer.parseInt(quantity)));
+            Goods goods = base.getGoods(name);
+            if(goods != null) {
+                for (int itemCounter = 0; itemCounter < Integer.parseInt(quantity); itemCounter++){
+                    createOrder.addItemToBuy(goods);
+                }
+            } else {
+                Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid goods name");
+            errorAlert.showAndWait();
+            }
+        } catch (Exception e){
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid goods name");
+            errorAlert.showAndWait();
+        }
+
+        createOrder.checkFreeLastBuy();
+        base.addToOrderList(createOrder);
+    }
        
+    
     @FXML
-    private void onJumpInTime()
-    {
-    	
+    private void doZoom(ScrollEvent scroll) {
+        scroll.consume();
+        double zoom;
+        if (scroll.getDeltaY() > 1) zoom = 1.1;
+        else zoom = 0.9;
+        map_base.setScaleX(zoom * map_base.getScaleX());
+        map_base.setScaleY(zoom * map_base.getScaleY());
+        map_base.layout();
     }
     
     @FXML
-    private void doZoom(ScrollEvent scrolling)
-    {
-    	
-    }
-    
-    @FXML
-    public void setLabel (LocalTime time)
-    {
+    public void setLabel (LocalTime time) {
     	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
         time_label.setText(time.format(formatter));
     }
     
 
-    public void ifSmthClicked(Drawable element, boolean isClicked){
+    public void ifSmthClicked(Drawable element, boolean isClicked) {
         for (Drawable draw : this.elements) {
             if (draw.equals(element) && isClicked && draw instanceof Shelf){
                 // map_base.getChildren().removeAll(draw.getGui());
@@ -125,11 +154,9 @@ public class MainController {
                 base.changeColor("blue");
                 // map_base.getChildren().addAll(draw.getGui());
             }  else if (draw instanceof Base){
-                // map_base.getChildren().removeAll(draw.getGui());
                 Base base = (Base) draw;
                 base.changeColor("start");
                 base.setClicked(false);
-                // map_base.getChildren().addAll(draw.getGui());
             } else if (draw instanceof Street){
                 Street street = (Street) draw;
                 if(street.isClicked()){
@@ -137,6 +164,16 @@ public class MainController {
                 } else {
                     street.changeColor("start");
                 }
+            } else if (draw.equals(element) && isClicked && draw instanceof Cart){
+                Cart cart = (Cart) draw;
+                cart.changeColor("red");
+                if(cart.getShelfRoute() != null){
+                    cart.getShelfRoute().get(0).changeColor("blue");
+                }
+            } else if (draw instanceof Cart) {
+                Cart cart = (Cart) draw;
+                cart.changeColor("start");
+                cart.setClicked(false);   
             }
         }
     }

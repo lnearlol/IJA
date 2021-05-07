@@ -27,11 +27,13 @@ public class Street implements Drawable {
 	private ArrayList<Shape> gui;
 	private boolean isClicked;
 	private MainController controller;
+	private Base base;
 	
-	public Street (double x1, double y1, double x2, double y2, int id, MainController controller) {
+	public Street (double x1, double y1, double x2, double y2, int id, MainController controller, Base base) {
 		this.begin = new Coordinates(x1, y1);
 		this.end = new Coordinates(x2, y2);
 		this. shelfList = new ArrayList<Shelf>();
+		this.base = base;
 		this.id = id;
 		this.isClicked = false;
 		this.controller = controller;
@@ -65,6 +67,7 @@ public class Street implements Drawable {
 		// System.out.println(this.id + ":  IS ON STREET pos: " + pos);
 		// System.out.println(this.id + ": street start" + this.begin);
 		// System.out.println(this.id + ": street end" + this.end + "\n");
+
 		if(this.begin.getX() == this.end.getX() && this.begin.getX() == pos.getX()){
 			if (this.begin.getY() < this.end.getY()) {
 				if (pos.getY() <= this.end.getY() && pos.getY() >= this.begin.getY()) {
@@ -91,6 +94,7 @@ public class Street implements Drawable {
 
 	public void clickedOnStreet() {
         Drawable UI = (Drawable) this;
+		Street newStreet = this;
         gui.get(0).setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             @FXML
@@ -99,6 +103,9 @@ public class Street implements Drawable {
                     isClicked = true;
                 else
                     isClicked = false;
+
+				base.setAlternativeWay(newStreet);
+				//tady new func
 				
                 controller.ifSmthClicked(UI, isClicked);
             }

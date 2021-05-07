@@ -1,30 +1,89 @@
 <?xml version="1.0"?>
 <company>
     <base>
-        <x>30</x>
-        <y>135</y>
+        <x>267</x>
+        <y>292.6</y>
     </base>
 
-<!-- // regal -> 399.6, 53.2, zastavka -> 413.6f, 39.9f -> shelf = stop (x  -14, y + 13.3)  -->
+<!-- // regal -> 399.6, 53.2, zastavka -> 413.6f, 40f -> shelf = stop (x  -14, y + 13.3)  -->
 <!-- new shelf -> (x+26.6) -->
 <!-- HLAVNI ULICE VZDICKY ID = 1 -->
     <street id="1">
-        <start_x>95</start_x>
-        <start_y>200</start_y>
-        <end_x>150</end_x>
-        <end_y>200</end_y>
+        <start_x>333</start_x>
+        <start_y>359</start_y>
+        <end_x>387</end_x>
+        <end_y>359</end_y>
     </street>
 
-    <street id="10">
-        <start_x>150</start_x>
-        <start_y>100</start_y>
-        <end_x>350</end_x>
-        <end_y>100</end_y>
+
+    <street id="53">
+        <start_x>546</start_x>
+        <start_y>359</start_y>
+        <end_x>546</end_x>
+        <end_y>439</end_y>
+    </street>
+
+    <street id="60">
+        <start_x>387</start_x>
+        <start_y>439</start_y>
+        <end_x>546</end_x>
+        <end_y>439</end_y>
+        <shelf id="110">
+            <x>399.6</x>
+            <y>452.2</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="phone">9022</goods_type>
+                <goods_type name="smartphone">1111</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="111">
+            <x>426.2</x>
+            <y> 452.2</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="table">44</goods_type>
+                <goods_type name="keyboard">250</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="112">
+            <x>452.8</x>
+            <y>452.2</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="113">
+            <x>479.4</x>
+            <y>452.2</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="114">
+            <x>506.2</x>
+            <y>452.2</y>
+            <stop_x>520</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
         <shelf id="100">
-            <x>161</x>
-            <y>113.3</y>
-            <stop_x>175</stop_x>
-            <stop_y>100</stop_y>
+            <x>399.6</x>
+            <y>399.2</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>439</stop_y>
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
@@ -32,108 +91,1881 @@
         </shelf>
 
         <shelf id="101">
-            <x>187.6</x>
-            <y>113.3</y>
-            <stop_x>201.6</stop_x>
-            <stop_y>100</stop_y>
+            <x>426.2</x>
+            <y>399.2</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>439</stop_y>
             <goods>
                 <goods_type name="shelf">100</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
         </shelf>
+        <shelf id="102">
+            <x>452.8</x>
+            <y>399.2</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="103">
+            <x>479.4</x>
+            <y>399.2</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="104">
+            <x>506.2</x>
+            <y>399.2</y>
+            <stop_x>520</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
     </street>
 
 
-    <street id="11">
-        <start_x>150</start_x>
+
+    <street id="30">
+        <start_x>387</start_x>
         <start_y>200</start_y>
-        <end_x>350</end_x>
+        <end_x>546</end_x>
         <end_y>200</end_y>
-        <shelf id="110">
-            <x>161</x>
-            <y>213.3</y>
-            <stop_x>175</stop_x>
+        <shelf id="40">
+            <x>399.6</x>
+            <y>159.6</y>
+            <stop_x>413.6</stop_x>
             <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="41">
+            <x>426.2</x>
+            <y>159.6</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="42">
+            <x>452.8</x>
+            <y>159.6</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="43">
+            <x>479.4</x>
+            <y>159.6</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="44">
+            <x>506.2</x>
+            <y>159.6</y>
+            <stop_x>520</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="50">
+            <x>399.6</x>
+            <y>212.8</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="51">
+            <x>426.2</x>
+            <y>212.8</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="52">
+            <x>452.8</x>
+            <y>212.8</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="53">
+            <x>479.4</x>
+            <y>212.8</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="54">
+            <x>506.2</x>
+            <y>212.8</y>
+            <stop_x>520</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+    <street id="40">
+        <start_x>387</start_x>
+        <start_y>279</start_y>
+        <end_x>546</end_x>
+        <end_y>279</end_y>
+        <shelf id="60">
+            <x>399.6</x>
+            <y>239.4</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="61">
+            <x>426.2</x>
+            <y>239.4</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="62">
+            <x>452.8</x>
+            <y>239.4</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="63">
+            <x>479.4</x>
+            <y>239.4</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="64">
+            <x>506.2</x>
+            <y>239.4</y>
+            <stop_x>520</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="70">
+            <x>399.6</x>
+            <y>292.6</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="71">
+            <x>426.2</x>
+            <y>292.6</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="72">
+            <x>452.8</x>
+            <y>292.6</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="73">
+            <x>479.4</x>
+            <y>292.6</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="74">
+            <x>506.2</x>
+            <y>292.6</y>
+            <stop_x>520</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+    
+
+    <street id="42">
+        <start_x>387</start_x>
+        <start_y>279</start_y>
+        <end_x>387</end_x>
+        <end_y>359</end_y>
+    </street>
+
+    <street id="43">
+        <start_x>546</start_x>
+        <start_y>279</start_y>
+        <end_x>546</end_x>
+        <end_y>359</end_y>
+    </street>
+
+     <street id="50">
+        <start_x>387</start_x>
+        <start_y>359</start_y>
+        <end_x>546</end_x>
+        <end_y>359</end_y>
+        <shelf id="90">
+            <x>399.6</x>
+            <y>372.4</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>359</stop_y>
             <goods>
                 <goods_type name="monitor">422</goods_type>
                 <goods_type name="notepad">111</goods_type>
             </goods>
         </shelf>
 
-        <shelf id="111">
-            <x>187.6</x>
-            <y>213.3</y>
-            <stop_x>201.6</stop_x>
-            <stop_y>200</stop_y>
+        <shelf id="91">
+            <x>426.2</x>
+            <y>372.4</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>359</stop_y>
             <goods>
                 <goods_type name="mouse">1010</goods_type>
                 <goods_type name="keyboard">990</goods_type>
             </goods>
         </shelf>
+        <shelf id="92">
+            <x>452.8</x>
+            <y>372.4</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="93">
+            <x>479.4</x>
+            <y>372.4</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="94">
+            <x>506.2</x>
+            <y>372.4</y>
+            <stop_x>520</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="80">
+            <x>399.6</x>
+            <y>319.2</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="81">
+            <x>426.2</x>
+            <y>319.2</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="82">
+            <x>452.8</x>
+            <y>319.2</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="83">
+            <x>479.4</x>
+            <y>319.2</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="84">
+            <x>506.2</x>
+            <y>319.2</y>
+            <stop_x>520</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
     </street>
 
-    <street id="12">
-        <start_x>150</start_x>
-        <start_y>300</start_y>
-        <end_x>350</end_x>
-        <end_y>300</end_y>
-        <shelf id="120">
-            <x>161</x>
-            <y>313.3</y>
-            <stop_x>175</stop_x>
-            <stop_y>300</stop_y>
+    <street id="52">
+        <start_x>387</start_x>
+        <start_y>359</start_y>
+        <end_x>387</end_x>
+        <end_y>439</end_y>
+    </street>
+
+
+   <!-- Prava pulka -->
+
+
+    <street id="11">
+        <start_x>546</start_x>
+        <start_y>40</start_y>
+        <end_x>706</end_x>
+        <end_y>40</end_y>
+        <shelf id="15">
+            <x>559.4</x>
+            <y>53.2</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>40</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="16">
+            <x>586.2</x>
+            <y>53.2</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>40</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="17">
+            <x>612.8</x>
+            <y>53.2</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>40</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="18">
+            <x>639.4</x>
+            <y>53.2</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>40</stop_y>
+            <goods>
+                <goods_type name="iphone">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="19">
+            <x>666.2</x>
+            <y>53.2</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>40</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+    <street id="21">
+        <start_x>546</start_x>
+        <start_y>120</start_y>
+        <end_x>706</end_x>
+        <end_y>120</end_y>
+        <shelf id="25">
+            <x>559.4</x>
+            <y>79.8</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="26">
+            <x>586.2</x>
+            <y>79.8</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="27">
+            <x>612.8</x>
+            <y>79.8</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="28">
+            <x>639.4</x>
+            <y>79.8</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="29">
+            <x>666.2</x>
+            <y>79.8</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="35">
+            <x>559.4</x>
+            <y>133.0</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="36">
+            <x>586.2</x>
+            <y>133.0</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="37">
+            <x>612.8</x>
+            <y>133.0</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="38">
+            <x>639.4</x>
+            <y>133.0</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="39">
+            <x>666.2</x>
+            <y>133.0</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+    <street id="31">
+        <start_x>546</start_x>
+        <start_y>200</start_y>
+        <end_x>706</end_x>
+        <end_y>200</end_y>
+        <shelf id="45">
+            <x>559.4</x>
+            <y>159.6</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="46">
+            <x>586.2</x>
+            <y>159.6</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="47">
+            <x>612.8</x>
+            <y>159.6</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="48">
+            <x>639.4</x>
+            <y>159.6</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="49">
+            <x>666.2</x>
+            <y>159.6</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="55">
+            <x>559.4</x>
+            <y>212.8</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="56">
+            <x>586.2</x>
+            <y>212.8</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="57">
+            <x>612.8</x>
+            <y>212.8</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="58">
+            <x>639.4</x>
+            <y>212.8</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="59">
+            <x>666.2</x>
+            <y>212.8</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>200</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+    <street id="41">
+        <start_x>546</start_x>
+        <start_y>279</start_y>
+        <end_x>706</end_x>
+        <end_y>279</end_y>
+        <shelf id="65">
+            <x>559.4</x>
+            <y>239.4</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="66">
+            <x>586.2</x>
+            <y>239.4</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="67">
+            <x>612.8</x>
+            <y>239.4</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="68">
+            <x>639.4</x>
+            <y>239.4</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="69">
+            <x>666.2</x>
+            <y>239.4</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="75">
+            <x>559.4</x>
+            <y>292.6</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="76">
+            <x>586.2</x>
+            <y>292.6</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="77">
+            <x>612.8</x>
+            <y>292.6</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="78">
+            <x>639.4</x>
+            <y>292.6</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="79">
+            <x>666.2</x>
+            <y>292.6</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>279</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+    <street id="51">
+        <start_x>546</start_x>
+        <start_y>359</start_y>
+        <end_x>706</end_x>
+        <end_y>359</end_y>
+        <shelf id="85">
+            <x>559.4</x>
+            <y>319.2</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="86">
+            <x>586.2</x>
+            <y>319.2</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="87">
+            <x>612.8</x>
+            <y>319.2</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="88">
+            <x>639.4</x>
+            <y>319.2</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="89">
+            <x>666.2</x>
+            <y>319.2</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="95">
+            <x>559.4</x>
+            <y>372.4</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="96">
+            <x>586.2</x>
+            <y>372.4</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="97">
+            <x>612.8</x>
+            <y>372.4</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="98">
+            <x>639.4</x>
+            <y>372.4</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="99">
+            <x>666.2</x>
+            <y>372.4</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>359</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+    <street id="61">
+        <start_x>546</start_x>
+        <start_y>439</start_y>
+        <end_x>706</end_x>
+        <end_y>439</end_y>
+        <shelf id="105">
+            <x>559.4</x>
+            <y>399.2</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="106">
+            <x>586.2</x>
+            <y>399.2</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="107">
+            <x>612.8</x>
+            <y>399.2</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="108">
+            <x>639.4</x>
+            <y>399.2</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="109">
+            <x>666.2</x>
+            <y>399.2</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="115">
+            <x>559.4</x>
+            <y>452.2</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="116">
+            <x>586.2</x>
+            <y>452.2</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="117">
+            <x>612.8</x>
+            <y>452.2</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="118">
+            <x>639.4</x>
+            <y>452.2</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="119">
+            <x>666.2</x>
+            <y>452.2</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>439</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+    <street id="71">
+        <start_x>546</start_x>
+        <start_y>519</start_y>
+        <end_x>706</end_x>
+        <end_y>519</end_y>
+        <shelf id="125">
+            <x>559.4</x>
+            <y>479.2</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="126">
+            <x>586.2</x>
+            <y>479.2</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="127">
+            <x>612.8</x>
+            <y>479.2</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="128">
+            <x>639.4</x>
+            <y>479.2</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="129">
+            <x>666.2</x>
+            <y>479.2</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="135">
+            <x>559.4</x>
+            <y>532.0</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="136">
+            <x>586.2</x>
+            <y>532.0</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="137">
+            <x>612.8</x>
+            <y>532.0</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="138">
+            <x>639.4</x>
+            <y>532.0</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="139">
+            <x>666.2</x>
+            <y>532.0</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+    <street id="81">
+        <start_x>546</start_x>
+        <start_y>599</start_y>
+        <end_x>706</end_x>
+        <end_y>599</end_y>
+        <shelf id="145">
+            <x>559.4</x>
+            <y>558.6</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="146">
+            <x>586.2</x>
+            <y>558.6</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="147">
+            <x>612.8</x>
+            <y>558.6</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="148">
+            <x>639.4</x>
+            <y>558.6</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="149">
+            <x>666.2</x>
+            <y>558.6</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="155">
+            <x>559.4</x>
+            <y>611.8</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="156">
+            <x>586.2</x>
+            <y>611.8</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="157">
+            <x>612.8</x>
+            <y>611.8</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="158">
+            <x>639.4</x>
+            <y>611.8</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="159">
+            <x>666.2</x>
+            <y>611.8</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+   <!-- Ostatni ulice -->
+
+    <street id="91">
+        <start_x>546</start_x>
+        <start_y>678</start_y>
+        <end_x>706</end_x>
+        <end_y>678</end_y>
+        
+        <shelf id="165">
+            <x>559.4</x>
+            <y>638.4</y>
+            <stop_x>573.0</stop_x>
+            <stop_y>678</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="166">
+            <x>586.2</x>
+            <y>638.4</y>
+            <stop_x>599.6</stop_x>
+            <stop_y>678</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="167">
+            <x>612.8</x>
+            <y>638.4</y>
+            <stop_x>626.2</stop_x>
+            <stop_y>678</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="168">
+            <x>639.4</x>
+            <y>638.4</y>
+            <stop_x>652.8</stop_x>
+            <stop_y>678</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="169">
+            <x>666.2</x>
+            <y>638.4</y>
+            <stop_x>679.4</stop_x>
+            <stop_y>678</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+    <street id="10">
+        <start_x>387</start_x>
+        <start_y>40</start_y>
+        <end_x>546</end_x>
+        <end_y>40</end_y>
+        <shelf id="10">
+            <x>399.6</x>
+            <y>53.2</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>40</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="11">
+            <x>426.2</x>
+            <y>53.2</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>40</stop_y>
+            <goods>
+                <goods_type name="toy">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="12">
+            <x>452.8</x>
+            <y>53.2</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>40</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="13">
+            <x>479.4</x>
+            <y>53.2</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>40</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="14">
+            <x>506.2</x>
+            <y>53.2</y>
+            <stop_x>520</stop_x>
+            <stop_y>40</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+    <street id="20">
+        <start_x>387</start_x>
+        <start_y>120</start_y>
+        <end_x>546</end_x>
+        <end_y>120</end_y>
+        <shelf id="20">
+            <x>399.6</x>
+            <y>79.8</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="21">
+            <x>426.2</x>
+            <y>79.8</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="22">
+            <x>452.8</x>
+            <y>79.8</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="23">
+            <x>479.4</x>
+            <y>79.8</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="24">
+            <x>506.2</x>
+            <y>79.8</y>
+            <stop_x>520</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="30">
+            <x>399.6</x>
+            <y>133.0</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="31">
+            <x>426.2</x>
+            <y>133.0</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="32">
+            <x>452.8</x>
+            <y>133.0</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="33">
+            <x>479.4</x>
+            <y>133.0</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="34">
+            <x>506.2</x>
+            <y>133.0</y>
+            <stop_x>520</stop_x>
+            <stop_y>120</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+    <street id="70">
+        <start_x>387</start_x>
+        <start_y>519</start_y>
+        <end_x>546</end_x>
+        <end_y>519</end_y>
+        <shelf id="130">
+            <x>399.6</x>
+            <y>532.0</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>519</stop_y>
             <goods>
                 <goods_type name="phone">9022</goods_type>
                 <goods_type name="smartphone">1111</goods_type>
             </goods>
         </shelf>
 
-        <shelf id="121">
-            <x>187.6</x>
-            <y>313.3</y>
-            <stop_x>201.6</stop_x>
-            <stop_y>300</stop_y>
+        <shelf id="131">
+            <x>426.2</x>
+            <y>532.0</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>519</stop_y>
             <goods>
                 <goods_type name="table">44</goods_type>
                 <goods_type name="keyboard">250</goods_type>
             </goods>
         </shelf>
+        <shelf id="132">
+            <x>452.8</x>
+            <y>532.0</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="133">
+            <x>479.4</x>
+            <y>532.0</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="134">
+            <x>506.2</x>
+            <y>532.0</y>
+            <stop_x>520</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="120">
+            <x>399.6</x>
+            <y>479.2</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="121">
+            <x>426.2</x>
+            <y>479.2</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="122">
+            <x>452.8</x>
+            <y>479.2</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="123">
+            <x>479.4</x>
+            <y>479.2</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="124">
+            <x>506.2</x>
+            <y>479.2</y>
+            <stop_x>520</stop_x>
+            <stop_y>519</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
     </street>
 
-     <street id="20">
-        <start_x>150</start_x>
-        <start_y>100</start_y>
-        <end_x>150</end_x>
+    <street id="80">
+        <start_x>387</start_x>
+        <start_y>599</start_y>
+        <end_x>546</end_x>
+        <end_y>599</end_y>
+        <shelf id="150">
+            <x>399.6</x>
+            <y>611.8</y>
+            <stop_x>413.6</stop_x>
+            <stop_y> 599</stop_y>
+            <goods>
+                <goods_type name="phone">9022</goods_type>
+                <goods_type name="smartphone">1111</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="151">
+            <x>426.2</x>
+            <y>611.8</y>
+            <stop_x>440.2</stop_x>
+            <stop_y> 599</stop_y>
+            <goods>
+                <goods_type name="table">44</goods_type>
+                <goods_type name="keyboard">250</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="152">
+            <x>452.8</x>
+            <y>611.8</y>
+            <stop_x>466.8</stop_x>
+            <stop_y> 599</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="153">
+            <x>479.4</x>
+            <y>611.8</y>
+            <stop_x>493.4</stop_x>
+            <stop_y> 599</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="154">
+            <x>506.2</x>
+            <y>611.8</y>
+            <stop_x>520</stop_x>
+            <stop_y> 599</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="140">
+            <x>399.6</x>
+            <y>558.6</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="141">
+            <x>426.2</x>
+            <y>558.6</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="142">
+            <x>452.8</x>
+            <y>558.6</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="143">
+            <x>479.4</x>
+            <y>558.6</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="144">
+            <x>506.2</x>
+            <y>558.6</y>
+            <stop_x>520</stop_x>
+            <stop_y>599</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+
+    <street id="90">
+        <start_x>387</start_x>
+        <start_y>678</start_y>
+        <end_x>546</end_x>
+        <end_y>678</end_y>
+        <shelf id="160">
+            <x>399.6</x>
+            <y>638.4</y>
+            <stop_x>413.6</stop_x>
+            <stop_y>678</stop_y>
+            <goods>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
+            </goods>
+        </shelf>
+
+        <shelf id="161">
+            <x>426.2</x>
+            <y>638.4</y>
+            <stop_x>440.2</stop_x>
+            <stop_y>678</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="162">
+            <x>452.8</x>
+            <y>638.4</y>
+            <stop_x>466.8</stop_x>
+            <stop_y>678</stop_y>
+            <goods>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="163">
+            <x>479.4</x>
+            <y>638.4</y>
+            <stop_x>493.4</stop_x>
+            <stop_y>678</stop_y>
+            <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+            </goods>
+        </shelf>
+        <shelf id="164">
+            <x>506.2</x>
+            <y>638.4</y>
+            <stop_x>520</stop_x>
+            <stop_y>678</stop_y>
+            <goods>
+                <goods_type name="shelf">100</goods_type>
+                <goods_type name="mouse">200</goods_type>
+            </goods>
+        </shelf>
+    </street>
+
+   <!-- Svisle ulice vlevo -->
+    
+    <street id="12">
+        <start_x>387</start_x>
+        <start_y>40</start_y>
+        <end_x>387</end_x>
+        <end_y>120</end_y>
+    </street>
+
+    <street id="22">
+        <start_x>387</start_x>
+        <start_y>120</start_y>
+        <end_x>387</end_x>
         <end_y>200</end_y>
     </street>
 
-    <street id="30">
-        <start_x>150</start_x>
+    <street id="32">
+        <start_x>387</start_x>
         <start_y>200</start_y>
-        <end_x>150</end_x>
-        <end_y>300</end_y>
+        <end_x>387</end_x>
+        <end_y>279</end_y>
     </street>
 
-     <street id="21">
-        <start_x>350</start_x>
-        <start_y>100</start_y>
-        <end_x>350</end_x>
+    <street id="62">
+        <start_x>387</start_x>
+        <start_y>439</start_y>
+        <end_x>387</end_x>
+        <end_y>519</end_y>
+    </street>
+
+    <street id="72">
+        <start_x>387</start_x>
+        <start_y>519</start_y>
+        <end_x>387</end_x>
+        <end_y>599</end_y>
+    </street>
+
+    <street id="82">
+        <start_x>387</start_x>
+        <start_y>599</start_y>
+        <end_x>387</end_x>
+        <end_y>678</end_y>
+    </street>
+
+   <!-- Svisle ulice stred -->
+
+    <street id="13">
+        <start_x>546</start_x>
+        <start_y>40</start_y>
+        <end_x>546</end_x>
+        <end_y>120</end_y>
+    </street>
+
+    <street id="23">
+        <start_x>546</start_x>
+        <start_y>120</start_y>
+        <end_x>546</end_x>
         <end_y>200</end_y>
     </street>
 
-    <street id="31">
-        <start_x>350</start_x>
+    <street id="33">
+        <start_x>546</start_x>
         <start_y>200</start_y>
-        <end_x>350</end_x>
-        <end_y>300</end_y>
+        <end_x>546</end_x>
+        <end_y>279</end_y>
     </street>
 
+    <street id="63">
+        <start_x>546</start_x>
+        <start_y>439</start_y>
+        <end_x>546</end_x>
+        <end_y>519</end_y>
+    </street>
+
+    <street id="73">
+        <start_x>546</start_x>
+        <start_y>519</start_y>
+        <end_x>546</end_x>
+        <end_y>599</end_y>
+    </street>
+
+    <street id="83">
+        <start_x>546</start_x>
+        <start_y>599</start_y>
+        <end_x>546</end_x>
+        <end_y>678</end_y>
+    </street>
+   
+   <!-- Svisle ulice pravo -->
+    <street id="14">
+        <start_x>706</start_x>
+        <start_y>40</start_y>
+        <end_x>706</end_x>
+        <end_y>120</end_y>
+    </street>
+
+    <street id="24">
+        <start_x>706</start_x>
+        <start_y>120</start_y>
+        <end_x>706</end_x>
+        <end_y>200</end_y>
+    </street>
+
+    <street id="34">
+        <start_x>706</start_x>
+        <start_y>200</start_y>
+        <end_x>706</end_x>
+        <end_y>279</end_y>
+    </street>
+
+    <street id="44">
+        <start_x>706</start_x>
+        <start_y>279</start_y>
+        <end_x>706</end_x>
+        <end_y>359</end_y>
+    </street>
+
+    <street id="54">
+        <start_x>706</start_x>
+        <start_y>359</start_y>
+        <end_x>706</end_x>
+        <end_y>439</end_y>
+    </street>
+
+    <street id="64">
+        <start_x>706</start_x>
+        <start_y>439</start_y>
+        <end_x>706</end_x>
+        <end_y>519</end_y>
+    </street>
+
+    <street id="74">
+        <start_x>706</start_x>
+        <start_y>519</start_y>
+        <end_x>706</end_x>
+        <end_y>599</end_y>
+    </street>
+
+    <street id="84">
+        <start_x>706</start_x>
+        <start_y>599</start_y>
+        <end_x>706</end_x>
+        <end_y>678</end_y>
+    </street>
+    
+
+   <!-- Objednavky -->
 
     <orders>
-        <order id = "1">
+        <!-- <order id = "1">
             <start>08:00:30</start>
             <goods_type name="table">5</goods_type>
-            <goods_type name="keyboard">20</goods_type>
+            <goods_type name="iphone">20</goods_type>
         </order>
 
         <order id = "2">
@@ -159,22 +1991,44 @@
             <goods_type name="chair">2</goods_type>
             <goods_type name="robot">1</goods_type>
             <goods_type name="keyboard">1</goods_type>
-        </order>
+        </order> -->
 
     </orders>
 
+   <!-- Voziky -->
+
     <carts>
         <cart id = "1">
-            <x>65</x>
-            <y>190</y>
+            <x>306.6</x>
+            <y>385.0</y>
         </cart>
         <cart id = "2">
-            <x>65</x>
-            <y>210</y>
+            <x>280.0</x>
+            <y>305.2</y>
         </cart>
         <cart id = "3">
-            <x>65</x>
-            <y>230</y>
+            <x>306.6</x>
+            <y>305.2</y>
+        </cart>
+        <cart id = "4">
+            <x>280.0</x>
+            <y>331.8</y>
+        </cart>
+        <cart id = "5">
+            <x>306.6</x>
+            <y>331.8</y>
+        </cart>
+        <cart id = "6">
+            <x>280.0</x>
+            <y>358.4</y>
+        </cart>
+        <cart id = "7">
+            <x>306.6</x>
+            <y>358.4</y>
+        </cart>
+        <cart id = "8">
+            <x>280.0</x>
+            <y>385.0</y>
         </cart>
     </carts>
 

@@ -37,7 +37,6 @@ public class Buy {
 			}
 		}
 		return newList;
-
 	}
 
 	public void addNamesAndCounts(){
@@ -114,6 +113,13 @@ public class Buy {
 				str += this.itemName.get(i) + " - " + String.valueOf(this.itemCount.get(i)) + "\n";
 		}
     	return str;
+	}
+
+	public String printBuy(){
+		return "Order id: " + this.orderId + "\n" + 
+		"Buy id: " + this.buyId + "\n\nBuy content:\n" + 
+		this.itemName + " - " + this.itemCount +"\n";
+		
 	}
 
 	@Override

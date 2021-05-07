@@ -23,7 +23,6 @@ import javafx.scene.text.Font;
 
 //
 import javafx.application.Platform;
-import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -41,20 +40,28 @@ public class Shelf implements Drawable  {
     Stop stop;
     Coordinates coordinates;
     MainController controller;
+    Street street;
+
 
     private ArrayList<Shape> gui;
     
     
-    public Shelf(double x, double y, double stopX, double stopY, int id, MainController controller){
+    public Shelf(double x, double y, double stopX, double stopY, int id, MainController controller, Street street){
     	this.id = id;
         this.goodsShelf = new ArrayList <GoodsItem>();
         this.productInform = new ArrayList <ProductInform>();
-        this.stop = new Stop(id, new Coordinates(stopX, stopY));
+        this.stop = new Stop(id, new Coordinates(stopX, stopY), this);
+
+        this.street = street;
 
         this.controller = controller;
         this.coordinates = new Coordinates(x, y);
         setGui();
         clickedOnShelf();
+    }
+
+    public Street getStreet(){
+        return this.street;
     }
 
     public Stop getStop() {

@@ -139,7 +139,7 @@ public class Main extends Application {
                     
 
                     Street createStreet = new Street(Double.parseDouble(start_x), Double.parseDouble(start_y), 
-                    Double.parseDouble(end_x), Double.parseDouble(end_y), Integer.parseInt(id), controller);
+                    Double.parseDouble(end_x), Double.parseDouble(end_y), Integer.parseInt(id), controller, base);
                     base.addStreet(createStreet);
                     NodeList childList =  element.getChildNodes();
                     for(int tmp = 0; tmp < childList.getLength(); tmp++) {
@@ -154,7 +154,7 @@ public class Main extends Application {
                             String stop_y = myElement.getElementsByTagName("stop_y").item(0).getTextContent();
 
                             Shelf createShelf = new Shelf(Double.parseDouble(shelf_x), Double.parseDouble(shelf_y),
-                            Double.parseDouble(stop_x), Double.parseDouble(stop_y), Integer.parseInt(shelf_id), controller);
+                            Double.parseDouble(stop_x), Double.parseDouble(stop_y), Integer.parseInt(shelf_id), controller, createStreet);
                             
                             base.addToStopList(createShelf.getStop());
                             base.addToShelfList(createShelf);
@@ -229,7 +229,7 @@ public class Main extends Application {
 
                 String x = myElement.getElementsByTagName("x").item(0).getTextContent();
                 String y = myElement.getElementsByTagName("y").item(0).getTextContent();
-                Cart createCart = new Cart(id, "red", base, new Coordinates(Double.parseDouble(x), Double.parseDouble(y)));
+                Cart createCart = new Cart(id, "red", base, new Coordinates(Double.parseDouble(x), Double.parseDouble(y)), controller);
                 base.addToCartList(createCart);
             }
         } catch (ParserConfigurationException | SAXException | IOException e) {

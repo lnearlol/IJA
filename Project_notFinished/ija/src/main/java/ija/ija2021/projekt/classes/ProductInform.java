@@ -23,7 +23,7 @@ public class ProductInform {
     }
 
     public boolean minusAmount(){
-        if(this.goodsAmount >= 0){
+        if(this.goodsAmount > 0){
             this.goodsAmount -= 1;
             return true;
         }
