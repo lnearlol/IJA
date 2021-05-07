@@ -1,13 +1,17 @@
-package ija.ija2021.projekt.classes;
+/**
+ * Project: Storage Simulation
+ * @author Roman Stepaniuk  <xstepa64>, Viktoryia Bahdanovich <xbahda01>
+ * 
+ * Class represents all functions for working with Street
+ * Date: 07.05.2021
+ */
 
+package ija.ija2021.projekt.classes;
 import java.util.ArrayList;
 
-import javafx.scene.shape.Line;
 import javafx.scene.shape.Ellipse;
 import ija.ija2021.projekt.settings.Drawable;
-
 import ija.ija2021.projekt.settings.MainController;
-
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
@@ -29,6 +33,15 @@ public class Street implements Drawable {
 	private MainController controller;
 	private Base base;
 	
+	/**
+	 * @param x1 x coordinate of start of street
+	 * @param y1 y coordinate of start of street
+	 * @param x2 x coordinate of end of street
+	 * @param y2 y coordinate of end of street
+	 * @param id id ulice
+	 * @param controller MainController
+	 * @param base Base
+	 */
 	public Street (double x1, double y1, double x2, double y2, int id, MainController controller, Base base) {
 		this.begin = new Coordinates(x1, y1);
 		this.end = new Coordinates(x2, y2);
@@ -41,7 +54,7 @@ public class Street implements Drawable {
 
 		clickedOnStreet();
 	}
-
+	
 	public int getId(){
 		return this.id;
 	}
@@ -64,10 +77,6 @@ public class Street implements Drawable {
 	}
 	
 	public boolean isOnStreet(Coordinates pos) {
-		// System.out.println(this.id + ":  IS ON STREET pos: " + pos);
-		// System.out.println(this.id + ": street start" + this.begin);
-		// System.out.println(this.id + ": street end" + this.end + "\n");
-
 		if(this.begin.getX() == this.end.getX() && this.begin.getX() == pos.getX()){
 			if (this.begin.getY() < this.end.getY()) {
 				if (pos.getY() <= this.end.getY() && pos.getY() >= this.begin.getY()) {
@@ -104,13 +113,10 @@ public class Street implements Drawable {
                 else
                     isClicked = false;
 
-				base.setAlternativeWay(newStreet);
-				//tady new func
-				
+				base.setAlternativeWay(newStreet);		
                 controller.ifSmthClicked(UI, isClicked);
             }
         });
-        // gui.get(0).setFill(Color.CRIMSON);
     }
 
 	public void setClicked(boolean set){

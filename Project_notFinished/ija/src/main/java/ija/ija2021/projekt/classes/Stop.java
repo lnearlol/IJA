@@ -1,19 +1,19 @@
+/**
+ * Project: Storage Simulation
+ * @author Roman Stepaniuk  <xstepa64>, Viktoryia Bahdanovich <xbahda01>
+ * 
+ * Class represents all functions for working with Stop
+ * Date: 07.05.2021
+ */
+
 package ija.ija2021.projekt.classes;
 
 import java.util.ArrayList;
 
-// import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-// import com.fasterxml.jackson.annotation.JsonIgnore;
-// import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-// import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-// import com.fasterxml.jackson.databind.util.StdConverter;
 import ija.ija2021.projekt.settings.Drawable;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Shape;
-
-//@JsonDeserialize(converter = Stop.StopConstructor.class)
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 
 public class Stop implements Drawable {
 	private int id;
@@ -21,12 +21,7 @@ public class Stop implements Drawable {
     private ArrayList<Shape> gui;
 	Shelf shelf;
 	
-//    
-//    /**
-//     * Empty constructor for deserializing YML
-//     */
-//    public Stop() {
-//    }
+
     
 	public Stop (int id, Coordinates coordinates, Shelf shelf) {
 		this.id = id;

@@ -1,8 +1,14 @@
+/**
+ * Project: Storage Simulation
+ * @author Roman Stepaniuk  <xstepa64>, Viktoryia Bahdanovich <xbahda01>
+ * 
+ * Class represents all functions for working with Order
+ * Date: 07.05.2021
+ */
+
 package ija.ija2021.projekt.classes;
 import java.time.LocalDate;
 import java.util.ArrayList;
-//import org.joda.time.DateTime;
-//import org.joda.time.LocalDateTime;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 import java.util.Date;
@@ -36,13 +42,6 @@ public class Order {
 
 			// 				DATE PRINT  HH:mm:ss
 			this.printTime = parser.format(this.startTime);
-			// System.out.println(this.printTime + " <-- NOW");  // print the string of time without date
-
-			// 		DATE COMPARISON
-			// Date date1 = parser.parse("00:30:00");
-			// if(date1.compareTo( this.startTime) > 0){
-			// 	System.out.println(date1 + " > " + this.startTime);
-			// }
 
 		} catch (ParseException e) {
 			System.out.println("INVALID DATE WAS ENTERED!");
@@ -79,32 +78,17 @@ public class Order {
 		if(this.LastBuy == null){
 			this.LastBuy = new GoodsItem [5];
 			this.LastBuy[0] = incomeItem;
-			// System.out.println("CAME   NULL - " + incomeItem.goods().getName());
 			return;
-		} else {
-			// System.out.println("--------------- ");
-			// for(int i = 0; i < 5; i++){
-			// 	if (LastBuy[i] != (null)){
-			// 		System.out.println("Array ["+i+"]");
-			// 		System.out.println("Array ["+i+"] = " + LastBuy[i].goods().getName());
-			// 	} else {
-			// 		System.out.println("Array ["+i+"] = NULL" );
-			// 	}
-			// }
-			
-			// System.out.println("--------------- ");
-		}
+		} 
 		for(int i = 0; i < 5; i++){
 			if (LastBuy[i] == (null)){
 				this.LastBuy[i] = incomeItem;
-				// System.out.println("CAME   NOT NULL - " + LastBuy[i].goods().getName());
 				return;
 			}
 		}
 		this.allBuyId.add(this.buyId);
 		this.buyList.add(new Buy(this.LastBuy, this.id, this.buyId++));
-		
-		// System.out.println("ADDED TO BUYLIST");
+
 		this.LastBuy = new GoodsItem [5];
 		this.LastBuy[0] = incomeItem;
 	}
@@ -113,26 +97,8 @@ public class Order {
 		if(this.LastBuy[0] != null){
 			this.allBuyId.add(this.buyId);
 			this.buyList.add(new Buy(this.LastBuy, this.id, this.buyId++));
-			// System.out.println("LAST BUY WAS NOT !!!1 FREE -------------------");
-			
-			// for(int i = 0; i < 5; i++){
-			// 	if (LastBuy[i] != (null)){
-			// 		System.out.println("Array ["+i+"]");
-			// 		System.out.println("Array ["+i+"] = " + LastBuy[i].goods().getName());
-			// 	} else {
-			// 		System.out.println("Array ["+i+"] = NULL" );
-			// 	}
-			// }
-			
-			// System.out.println("LAST --------------- ");
-		
-
 		} 
-		// else {
-		// 	System.out.println("LAST BUY WAS FREE ----------");
-		// }
 	}
-
 
 	public void addToProductInform(ProductInform product){
         this.productInform.add(product);
@@ -143,7 +109,6 @@ public class Order {
     }
 	
 	public void printInfo(){
-		
 		if(this.buyList == null)
 			System.out.println("BUYLIST IS NULL");
 		

@@ -1,3 +1,11 @@
+/**
+ * Project: Storage Simulation
+ * @author Roman Stepaniuk  <xstepa64>, Viktoryia Bahdanovich <xbahda01>
+ * 
+ * Class represents all functions for working with Coordinates
+ * Date: 07.05.2021
+ */
+
 package ija.ija2021.projekt.classes;
 import java.lang.Math;
 import java.util.Objects;
@@ -31,9 +39,6 @@ public class Coordinates {
 		this.y = y;
 	}
 	
-	// public double distanse(double x, double y) {
-	// 	return Math.abs(this.x - x) + Math.abs(this.y - y);
-	// }
 
 	public double getDistanceBetweenCoordinates(Coordinates cord){
 		return Math.sqrt(Math.pow(this.x - cord.getX(), 2) +  Math.pow(this.y - cord.getY(), 2));
@@ -43,14 +48,12 @@ public class Coordinates {
     @Override
     public boolean equals(Object coordinates){
         Coordinates tmp1 = (Coordinates) coordinates;
-		// System.out.println("1 -" + this.toString() +"\n2 - " + tmp1);
         if (this == coordinates)
             return true;
         else if (coordinates == null)
             return false;
         else if (coordinates instanceof Coordinates){
             Coordinates tmp = (Coordinates) coordinates;
-			// System.out.println("1 -" + this.toString() +"\n2 - " + tmp);
             if(Math.round(tmp.getX()) == Math.round(this.x) && Math.round(tmp.getY()) == Math.round(this.y)){
                 return true;
             }

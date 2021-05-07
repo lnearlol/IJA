@@ -1,9 +1,12 @@
+/**
+ * Project: Storage Simulation
+ * @author Roman Stepaniuk  <xstepa64>, Viktoryia Bahdanovich <xbahda01>
+ * 
+ * Class represent working of main function. Opens all files, read data from XML and transfer control to MainController.
+ * Date: 07.05.2021
+ */
 
 package ija.ija2021.projekt;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator;
 
 import ija.ija2021.projekt.classes.Goods;
 import ija.ija2021.projekt.classes.GoodsItem;
@@ -17,14 +20,12 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-//import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-//
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -63,14 +64,11 @@ public class Main extends Application {
     public void startTime(MainController controller){
         ArrayList<Drawable> elements = new ArrayList<>();
         Base base = null;
-//        YAMLFactory map_base = new YAMLFactory().disable(YAMLGenerator.Feature.WRITE_DOC_START_MARKER);
-//        ObjectMapper mapper = new ObjectMapper(map_base);
-        
-        //----
-        
+
      // Instantiate the Factory
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
+            // Add XML data to program
         try {	
         	
             // optional, but recommended
@@ -95,12 +93,9 @@ public class Main extends Application {
 				String x = baseElement.getElementsByTagName("x").item(0).getTextContent();
 				String y = baseElement.getElementsByTagName("y").item(0).getTextContent();
 
-				base = new Base(Double.parseDouble(x), Double.parseDouble(y), controller);
-				
-				
-				
+				base = new Base(Double.parseDouble(x), Double.parseDouble(y), controller);			
 			}
-            // get <staff>
+            // adding streets to Base
             NodeList list = doc.getElementsByTagName("street");
 
             for (int temp = 0; temp < list.getLength(); temp++) {
@@ -119,25 +114,7 @@ public class Main extends Application {
                     String end_x = element.getElementsByTagName("end_x").item(0).getTextContent();
                     String end_y = element.getElementsByTagName("end_y").item(0).getTextContent();
 
-                    // get text
-//                    String firstname = element.getElementsByTagName("firstname").item(0).getTextContent();
-//                    String lastname = element.getElementsByTagName("lastname").item(0).getTextContent();
-//                    String nickname = element.getElementsByTagName("nickname").item(0).getTextContent();
-
-//                    NodeList salaryNodeList = element.getElementsByTagName("salary");
-//                    String salary = salaryNodeList.item(0).getTextContent();
-//
-//                    // get salary's attribute
-//                    String currency = salaryNodeList.item(0).getAttributes().getNamedItem("currency").getTextContent();
-
-//                    System.out.println("Current Element :" + node.getNodeName());
-//                    System.out.println("Staff Id : " + id);
-//                    System.out.println("First Name : " + firstname);
-//                    System.out.println("Last Name : " + lastname);
-//                    System.out.println("Nick Name : " + nickname);
-//                    System.out.printf("Salary [Currency] : %,.2f [%s]%n%n", Float.parseFloat(salary), currency);
                     
-
                     Street createStreet = new Street(Double.parseDouble(start_x), Double.parseDouble(start_y), 
                     Double.parseDouble(end_x), Double.parseDouble(end_y), Integer.parseInt(id), controller, base);
                     base.addStreet(createStreet);
@@ -177,12 +154,10 @@ public class Main extends Application {
                             createStreet.addToShelfList(createShelf);
                         } 
                     }
-
-
-                    // System.out.println(createStreet);
-
                 }
             }
+
+            // adding orders
             NodeList orders = doc.getElementsByTagName("orders");
             Node orderList = orders.item(0);
             Element orderElements = (Element) orderList;
@@ -211,12 +186,11 @@ public class Main extends Application {
                     }
 
                 }
-                // System.out.println(createOrder);
                 createOrder.checkFreeLastBuy();
                 base.addToOrderList(createOrder);
             }
 
-
+            // adding carts to Base
             NodeList carts = doc.getElementsByTagName("carts");
             Node cartList = carts.item(0);
             Element cartElements = (Element) cartList;
@@ -238,23 +212,20 @@ public class Main extends Application {
         
         //---
         
+        // print base information
         System.out.println(base);
         
-//        Base base = mapper.readValue(new File("./data/map_base.yml"), Base.class);
+
+        // add everything drawable to array to draw it in Controller
         elements.add(base.getBase());
         elements.addAll(base.getStreetList());
         elements.addAll(base.getStopList());
         elements.addAll(base.getShelfList());
         elements.addAll(base.getCartList());
-        
-        controller.addBase(base);
-        
-        for (Drawable i : elements) {
-        	// System.out.println("hi");
-        }
-        controller.setElements(elements);
-//        new Testovaci_trida();
 
+        controller.addBase(base);
+        controller.setElements(elements);
+        // program run
         controller.startClock();
     }
 }

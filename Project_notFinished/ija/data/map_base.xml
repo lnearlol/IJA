@@ -35,7 +35,11 @@
             <stop_y>439</stop_y>
             <goods>
                 <goods_type name="phone">9022</goods_type>
-                <goods_type name="smartphone">1111</goods_type>
+                <goods_type name="spoon">111</goods_type>
+                <goods_type name="pen">90</goods_type>
+                <goods_type name="ring">120</goods_type>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
             </goods>
         </shelf>
 
@@ -47,6 +51,8 @@
             <goods>
                 <goods_type name="table">44</goods_type>
                 <goods_type name="keyboard">250</goods_type>
+                <goods_type name="shelf">300</goods_type>
+                <goods_type name="chair">200</goods_type>
             </goods>
         </shelf>
         <shelf id="112">
@@ -57,6 +63,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="toy">525</goods_type>
+                <goods_type name="robot">624</goods_type>
             </goods>
         </shelf>
         <shelf id="113">
@@ -65,6 +73,8 @@
             <stop_x>493.4</stop_x>
             <stop_y>439</stop_y>
             <goods>
+                <goods_type name="shelf">300</goods_type>
+                <goods_type name="mouse">200</goods_type>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
@@ -75,7 +85,11 @@
             <stop_x>520</stop_x>
             <stop_y>439</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
+                <goods_type name="container">90</goods_type>
+                <goods_type name="jug">120</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -85,6 +99,8 @@
             <stop_x>413.6</stop_x>
             <stop_y>439</stop_y>
             <goods>
+                <goods_type name="trousers">90</goods_type>
+                <goods_type name="tablet">120</goods_type>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
             </goods>
@@ -96,8 +112,9 @@
             <stop_x>440.2</stop_x>
             <stop_y>439</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="table">44</goods_type>
             </goods>
         </shelf>
         <shelf id="102">
@@ -108,6 +125,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="phone">9022</goods_type>
+                <goods_type name="snickers">1111</goods_type>
             </goods>
         </shelf>
         <shelf id="103">
@@ -116,6 +135,8 @@
             <stop_x>493.4</stop_x>
             <stop_y>439</stop_y>
             <goods>
+                <goods_type name="glasses">90</goods_type>
+                <goods_type name="globe">120</goods_type>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
@@ -126,8 +147,11 @@
             <stop_x>520</stop_x>
             <stop_y>439</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="sandals">90</goods_type>
+                <goods_type name="soap">120</goods_type>
+                <goods_type name="shoes">90</goods_type>
             </goods>
         </shelf>
     </street>
@@ -147,6 +171,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="turntable">110</goods_type>
+                <goods_type name="stand">90</goods_type>
             </goods>
         </shelf>
 
@@ -156,8 +182,12 @@
             <stop_x>440.2</stop_x>
             <stop_y>200</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="drum">90</goods_type>
+                <goods_type name="earrings">55</goods_type>
+                <goods_type name="socks">120</goods_type>
+                <goods_type name="palette">90</goods_type>
             </goods>
         </shelf>
         <shelf id="42">
@@ -168,6 +198,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="flag">100</goods_type>
+                <goods_type name="guitar">155</goods_type>
             </goods>
         </shelf>
         <shelf id="43">
@@ -178,6 +210,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="scissors">290</goods_type>
+                <goods_type name="suit">90</goods_type>
             </goods>
         </shelf>
         <shelf id="44">
@@ -186,8 +220,10 @@
             <stop_x>520</stop_x>
             <stop_y>200</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="phone">9022</goods_type>
+                <goods_type name="shirt">1111</goods_type>
             </goods>
         </shelf>
         <shelf id="50">
@@ -207,8 +243,10 @@
             <stop_x>440.2</stop_x>
             <stop_y>200</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="cap">525</goods_type>
+                <goods_type name="mixer">624</goods_type>
             </goods>
         </shelf>
         <shelf id="52">
@@ -219,6 +257,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="heels">100</goods_type>
+                <goods_type name="jacket">355</goods_type>
             </goods>
         </shelf>
         <shelf id="53">
@@ -229,6 +269,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="blender">525</goods_type>
+                <goods_type name="book">424</goods_type>
             </goods>
         </shelf>
         <shelf id="54">
@@ -237,7 +279,9 @@
             <stop_x>520</stop_x>
             <stop_y>200</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
+                <goods_type name="ukulele">100</goods_type>
+                <goods_type name="horn">155</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -256,6 +300,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="boots">525</goods_type>
+                <goods_type name="bikini">624</goods_type>
             </goods>
         </shelf>
 
@@ -265,8 +311,10 @@
             <stop_x>440.2</stop_x>
             <stop_y>279</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="jewelry">90</goods_type>
+                <goods_type name="dish">120</goods_type>
             </goods>
         </shelf>
         <shelf id="62">
@@ -277,6 +325,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="bag">100</goods_type>
+                <goods_type name="bra">200</goods_type>
             </goods>
         </shelf>
         <shelf id="63">
@@ -295,8 +345,10 @@
             <stop_x>520</stop_x>
             <stop_y>279</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="glass">90</goods_type>
+                <goods_type name="basin">120</goods_type>
             </goods>
         </shelf>
         <shelf id="70">
@@ -307,6 +359,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="ball">520</goods_type>
+                <goods_type name="cup">510</goods_type>
             </goods>
         </shelf>
 
@@ -316,8 +370,10 @@
             <stop_x>440.2</stop_x>
             <stop_y>279</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="jumper">90</goods_type>
+                <goods_type name="leggings">120</goods_type>
             </goods>
         </shelf>
         <shelf id="72">
@@ -328,6 +384,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="jeans">90</goods_type>
+                <goods_type name="lamp">120</goods_type>
             </goods>
         </shelf>
         <shelf id="73">
@@ -338,6 +396,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="spoon">111</goods_type>
+                <goods_type name="pen">90</goods_type>
             </goods>
         </shelf>
         <shelf id="74">
@@ -346,8 +406,11 @@
             <stop_x>520</stop_x>
             <stop_y>279</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="box">520</goods_type>
+                <goods_type name="conditioner">510</goods_type>
+                <goods_type name="robot">624</goods_type>
             </goods>
         </shelf>
     </street>
@@ -380,6 +443,9 @@
             <goods>
                 <goods_type name="monitor">422</goods_type>
                 <goods_type name="notepad">111</goods_type>
+                <goods_type name="paper">90</goods_type>
+                <goods_type name="pants">120</goods_type>
+                <goods_type name="mat">70</goods_type>
             </goods>
         </shelf>
 
@@ -391,6 +457,8 @@
             <goods>
                 <goods_type name="mouse">1010</goods_type>
                 <goods_type name="keyboard">990</goods_type>
+                <goods_type name="camera">90</goods_type>
+                <goods_type name="spatula">120</goods_type>
             </goods>
         </shelf>
         <shelf id="92">
@@ -401,6 +469,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="saucepan">90</goods_type>
+                <goods_type name="pot">120</goods_type>
             </goods>
         </shelf>
         <shelf id="93">
@@ -411,6 +481,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="scraper">90</goods_type>
+                <goods_type name="peeler">120</goods_type>
             </goods>
         </shelf>
         <shelf id="94">
@@ -419,8 +491,10 @@
             <stop_x>520</stop_x>
             <stop_y>359</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="mug">90</goods_type>
+                <goods_type name="tava">120</goods_type>
             </goods>
         </shelf>
         <shelf id="80">
@@ -431,6 +505,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="bowl">90</goods_type>
+                <goods_type name="roller">120</goods_type>
             </goods>
         </shelf>
 
@@ -440,8 +516,10 @@
             <stop_x>440.2</stop_x>
             <stop_y>359</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="parfume">90</goods_type>
+                <goods_type name="pencil">120</goods_type>
             </goods>
         </shelf>
         <shelf id="82">
@@ -452,6 +530,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="heater">90</goods_type>
+                <goods_type name="dehydrator">120</goods_type>
             </goods>
         </shelf>
         <shelf id="83">
@@ -470,7 +550,7 @@
             <stop_x>520</stop_x>
             <stop_y>359</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -500,6 +580,10 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="phone">9022</goods_type>
+                <goods_type name="spoon">111</goods_type>
+                <goods_type name="pen">90</goods_type>
+                <goods_type name="ring">120</goods_type>
             </goods>
         </shelf>
 
@@ -509,8 +593,13 @@
             <stop_x>599.6</stop_x>
             <stop_y>40</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="balloon">590</goods_type>
+                <goods_type name="belt">410</goods_type>
+                <goods_type name="mouse">200</goods_type>
+                <goods_type name="umbrella">90</goods_type>
+                <goods_type name="violin">120</goods_type>
             </goods>
         </shelf>
         <shelf id="17">
@@ -521,6 +610,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="sanitizer">90</goods_type>
+                <goods_type name="cooler">120</goods_type>
             </goods>
         </shelf>
         <shelf id="18">
@@ -529,8 +620,10 @@
             <stop_x>652.8</stop_x>
             <stop_y>40</stop_y>
             <goods>
-                <goods_type name="iphone">100</goods_type>
+                <goods_type name="iphone">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="knife">100</goods_type>
+                <goods_type name="diary">200</goods_type>
             </goods>
         </shelf>
         <shelf id="19">
@@ -539,7 +632,7 @@
             <stop_x>679.4</stop_x>
             <stop_y>40</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -558,6 +651,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="cane">355</goods_type>
+                <goods_type name="hat">729</goods_type>
             </goods>
         </shelf>
 
@@ -567,8 +662,10 @@
             <stop_x>599.6</stop_x>
             <stop_y>120</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="lid">90</goods_type>
+                <goods_type name="pan">120</goods_type>
             </goods>
         </shelf>
         <shelf id="27">
@@ -579,6 +676,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="costume">455</goods_type>
+                <goods_type name="cardigan">124</goods_type>
             </goods>
         </shelf>
         <shelf id="28">
@@ -589,6 +688,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="socket">90</goods_type>
+                <goods_type name="scale">120</goods_type>
             </goods>
         </shelf>
         <shelf id="29">
@@ -597,8 +698,10 @@
             <stop_x>679.4</stop_x>
             <stop_y>120</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="desk">100</goods_type>
+                <goods_type name="chess">95</goods_type>
             </goods>
         </shelf>
         <shelf id="35">
@@ -608,6 +711,8 @@
             <stop_y>120</stop_y>
             <goods>
                 <goods_type name="toy">525</goods_type>
+                <goods_type name="dress">390</goods_type>
+                <goods_type name="scirt">255</goods_type>
                 <goods_type name="robot">624</goods_type>
             </goods>
         </shelf>
@@ -618,8 +723,10 @@
             <stop_x>599.6</stop_x>
             <stop_y>120</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="iron">390</goods_type>
+                <goods_type name="purifier">120</goods_type>
             </goods>
         </shelf>
         <shelf id="37">
@@ -630,6 +737,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="grinder">90</goods_type>
+                <goods_type name="toaster">120</goods_type>
             </goods>
         </shelf>
         <shelf id="38">
@@ -640,6 +749,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="kettle">90</goods_type>
+                <goods_type name="cooktop">120</goods_type>
             </goods>
         </shelf>
         <shelf id="39">
@@ -648,7 +759,7 @@
             <stop_x>679.4</stop_x>
             <stop_y>120</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -676,8 +787,10 @@
             <stop_x>599.6</stop_x>
             <stop_y>200</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="vase">90</goods_type>
+                <goods_type name="wheel">120</goods_type>
             </goods>
         </shelf>
         <shelf id="47">
@@ -688,6 +801,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="fan">90</goods_type>
+                <goods_type name="cooler">120</goods_type>
             </goods>
         </shelf>
         <shelf id="48">
@@ -706,7 +821,7 @@
             <stop_x>679.4</stop_x>
             <stop_y>200</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -727,7 +842,7 @@
             <stop_x>599.6</stop_x>
             <stop_y>200</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
         </shelf>
@@ -739,6 +854,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="wallet">90</goods_type>
+                <goods_type name="watches">120</goods_type>
             </goods>
         </shelf>
         <shelf id="58">
@@ -757,7 +874,7 @@
             <stop_x>679.4</stop_x>
             <stop_y>200</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -776,6 +893,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="wallet">90</goods_type>
+                <goods_type name="watches">120</goods_type>
             </goods>
         </shelf>
 
@@ -785,7 +904,7 @@
             <stop_x>599.6</stop_x>
             <stop_y>279</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
         </shelf>
@@ -797,6 +916,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="fan">90</goods_type>
+                <goods_type name="cooler">120</goods_type>
             </goods>
         </shelf>
         <shelf id="68">
@@ -815,8 +936,10 @@
             <stop_x>679.4</stop_x>
             <stop_y>279</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="vase">90</goods_type>
+                <goods_type name="wheel">120</goods_type>
             </goods>
         </shelf>
         <shelf id="75">
@@ -827,6 +950,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="kettle">390</goods_type>
+                <goods_type name="cooktop">120</goods_type>
             </goods>
         </shelf>
 
@@ -836,7 +961,7 @@
             <stop_x>599.6</stop_x>
             <stop_y>279</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
         </shelf>
@@ -866,7 +991,7 @@
             <stop_x>679.4</stop_x>
             <stop_y>279</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -885,6 +1010,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="grinder">90</goods_type>
+                <goods_type name="toaster">120</goods_type>
             </goods>
         </shelf>
 
@@ -894,7 +1021,7 @@
             <stop_x>599.6</stop_x>
             <stop_y>359</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
         </shelf>
@@ -924,7 +1051,7 @@
             <stop_x>679.4</stop_x>
             <stop_y>359</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -936,6 +1063,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="dress">390</goods_type>
+                <goods_type name="scirt">355</goods_type>
             </goods>
         </shelf>
 
@@ -945,7 +1074,9 @@
             <stop_x>599.6</stop_x>
             <stop_y>359</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
+                <goods_type name="iron">390</goods_type>
+                <goods_type name="purifier">120</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
         </shelf>
@@ -967,6 +1098,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="desk">100</goods_type>
+                <goods_type name="chess">395</goods_type>
             </goods>
         </shelf>
         <shelf id="99">
@@ -975,7 +1108,7 @@
             <stop_x>679.4</stop_x>
             <stop_y>359</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -994,6 +1127,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="socket">90</goods_type>
+                <goods_type name="scale">120</goods_type>
             </goods>
         </shelf>
 
@@ -1003,7 +1138,7 @@
             <stop_x>599.6</stop_x>
             <stop_y>439</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
         </shelf>
@@ -1033,7 +1168,7 @@
             <stop_x>679.4</stop_x>
             <stop_y>439</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -1054,8 +1189,10 @@
             <stop_x>599.6</stop_x>
             <stop_y>439</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="costume">455</goods_type>
+                <goods_type name="cardigan">124</goods_type>
             </goods>
         </shelf>
         <shelf id="117">
@@ -1066,6 +1203,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="lid">90</goods_type>
+                <goods_type name="pan">320</goods_type>
             </goods>
         </shelf>
         <shelf id="118">
@@ -1084,8 +1223,10 @@
             <stop_x>679.4</stop_x>
             <stop_y>439</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="cane">355</goods_type>
+                <goods_type name="hat">729</goods_type>
             </goods>
         </shelf>
     </street>
@@ -1112,8 +1253,11 @@
             <stop_x>599.6</stop_x>
             <stop_y>519</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="iphone">300</goods_type>
+                <goods_type name="knife">300</goods_type>
+                <goods_type name="diary">200</goods_type>
             </goods>
         </shelf>
         <shelf id="127">
@@ -1124,6 +1268,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="sanitizer">90</goods_type>
+                <goods_type name="cooler">120</goods_type>
             </goods>
         </shelf>
         <shelf id="128">
@@ -1142,7 +1288,7 @@
             <stop_x>679.4</stop_x>
             <stop_y>519</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -1154,6 +1300,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="balloon">590</goods_type>
+                <goods_type name="belt">410</goods_type>
             </goods>
         </shelf>
 
@@ -1163,8 +1311,10 @@
             <stop_x>599.6</stop_x>
             <stop_y>519</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="heater">90</goods_type>
+                <goods_type name="dehydrator">120</goods_type>
             </goods>
         </shelf>
         <shelf id="137">
@@ -1193,7 +1343,7 @@
             <stop_x>679.4</stop_x>
             <stop_y>519</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -1212,6 +1362,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="parfume">90</goods_type>
+                <goods_type name="pencil">120</goods_type>
             </goods>
         </shelf>
 
@@ -1221,8 +1373,10 @@
             <stop_x>599.6</stop_x>
             <stop_y>599</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="bowl">90</goods_type>
+                <goods_type name="roller">120</goods_type>
             </goods>
         </shelf>
         <shelf id="147">
@@ -1251,7 +1405,7 @@
             <stop_x>679.4</stop_x>
             <stop_y>599</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -1272,8 +1426,10 @@
             <stop_x>599.6</stop_x>
             <stop_y>599</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="mug">300</goods_type>
+                <goods_type name="tava">120</goods_type>
             </goods>
         </shelf>
         <shelf id="157">
@@ -1302,7 +1458,7 @@
             <stop_x>679.4</stop_x>
             <stop_y>599</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -1324,6 +1480,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="scraper">90</goods_type>
+                <goods_type name="peeler">120</goods_type>
             </goods>
         </shelf>
 
@@ -1333,8 +1491,10 @@
             <stop_x>599.6</stop_x>
             <stop_y>678</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="saucepan">90</goods_type>
+                <goods_type name="pot">120</goods_type>
             </goods>
         </shelf>
         <shelf id="167">
@@ -1345,6 +1505,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="paper">90</goods_type>
+                <goods_type name="pants">320</goods_type>
             </goods>
         </shelf>
         <shelf id="168">
@@ -1355,6 +1517,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="camera">90</goods_type>
+                <goods_type name="spatula">120</goods_type>
             </goods>
         </shelf>
         <shelf id="169">
@@ -1363,8 +1527,12 @@
             <stop_x>679.4</stop_x>
             <stop_y>678</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="palette">90</goods_type>
+                <goods_type name="turntable">110</goods_type>
+                <goods_type name="stand">90</goods_type>
+                <goods_type name="mat">70</goods_type>
             </goods>
         </shelf>
     </street>
@@ -1381,6 +1549,8 @@
             <stop_y>40</stop_y>
             <goods>
                 <goods_type name="toy">525</goods_type>
+                <goods_type name="box">520</goods_type>
+                <goods_type name="conditioner">510</goods_type>
                 <goods_type name="robot">624</goods_type>
             </goods>
         </shelf>
@@ -1393,6 +1563,8 @@
             <goods>
                 <goods_type name="toy">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="jeans">90</goods_type>
+                <goods_type name="lamp">120</goods_type>
             </goods>
         </shelf>
         <shelf id="12">
@@ -1403,6 +1575,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="glass">90</goods_type>
+                <goods_type name="basin">120</goods_type>
             </goods>
         </shelf>
         <shelf id="13">
@@ -1413,6 +1587,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="ball">520</goods_type>
+                <goods_type name="cup">510</goods_type>
             </goods>
         </shelf>
         <shelf id="14">
@@ -1421,8 +1597,10 @@
             <stop_x>520</stop_x>
             <stop_y>40</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="jumper">90</goods_type>
+                <goods_type name="leggings">120</goods_type>
             </goods>
         </shelf>
     </street>
@@ -1440,6 +1618,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="bag">100</goods_type>
+                <goods_type name="bra">200</goods_type>
             </goods>
         </shelf>
 
@@ -1449,8 +1629,10 @@
             <stop_x>440.2</stop_x>
             <stop_y>120</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="jewelry">90</goods_type>
+                <goods_type name="dish">120</goods_type>
             </goods>
         </shelf>
         <shelf id="22">
@@ -1461,6 +1643,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="boots">525</goods_type>
+                <goods_type name="bikini">624</goods_type>
             </goods>
         </shelf>
         <shelf id="23">
@@ -1471,6 +1655,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="spoon">111</goods_type>
+                <goods_type name="pen">90</goods_type>
             </goods>
         </shelf>
         <shelf id="24">
@@ -1479,8 +1665,9 @@
             <stop_x>520</stop_x>
             <stop_y>120</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="ukulele">100</goods_type>
             </goods>
         </shelf>
         <shelf id="30">
@@ -1491,6 +1678,8 @@
             <goods>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
+                <goods_type name="horn">155</goods_type>
+                <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
 
@@ -1500,8 +1689,10 @@
             <stop_x>440.2</stop_x>
             <stop_y>120</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="blender">525</goods_type>
+                <goods_type name="book">424</goods_type>
             </goods>
         </shelf>
         <shelf id="32">
@@ -1512,6 +1703,8 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="heels">100</goods_type>
+                <goods_type name="jacket">355</goods_type>
             </goods>
         </shelf>
         <shelf id="33">
@@ -1522,6 +1715,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="cap">525</goods_type>
+                <goods_type name="mixer">624</goods_type>
             </goods>
         </shelf>
         <shelf id="34">
@@ -1530,8 +1725,10 @@
             <stop_x>520</stop_x>
             <stop_y>120</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="drum">90</goods_type>
+                <goods_type name="earrings">55</goods_type>
             </goods>
         </shelf>
     </street>
@@ -1548,7 +1745,13 @@
             <stop_y>519</stop_y>
             <goods>
                 <goods_type name="phone">9022</goods_type>
-                <goods_type name="smartphone">1111</goods_type>
+                <goods_type name="shirt">1111</goods_type>
+                <goods_type name="scissors">340</goods_type>
+                <goods_type name="suit">390</goods_type>
+                <goods_type name="socks">120</goods_type>
+                <goods_type name="palette">390</goods_type>
+                <goods_type name="turntable">110</goods_type>
+                <goods_type name="stand">390</goods_type>
             </goods>
         </shelf>
 
@@ -1560,6 +1763,8 @@
             <goods>
                 <goods_type name="table">44</goods_type>
                 <goods_type name="keyboard">250</goods_type>
+                <goods_type name="shelf">300</goods_type>
+                <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
         <shelf id="132">
@@ -1570,6 +1775,9 @@
             <goods>
                 <goods_type name="keyboard">100</goods_type>
                 <goods_type name="notepad">200</goods_type>
+                <goods_type name="sandals">90</goods_type>
+                <goods_type name="soap">120</goods_type>
+                <goods_type name="shoes">90</goods_type>
             </goods>
         </shelf>
         <shelf id="133">
@@ -1580,6 +1788,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="flag">100</goods_type>
+                <goods_type name="guitar">155</goods_type>
             </goods>
         </shelf>
         <shelf id="134">
@@ -1588,7 +1798,7 @@
             <stop_x>520</stop_x>
             <stop_y>519</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -1609,7 +1819,7 @@
             <stop_x>440.2</stop_x>
             <stop_y>519</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
         </shelf>
@@ -1631,6 +1841,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="glasses">90</goods_type>
+                <goods_type name="globe">120</goods_type>
             </goods>
         </shelf>
         <shelf id="124">
@@ -1639,7 +1851,7 @@
             <stop_x>520</stop_x>
             <stop_y>519</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -1657,7 +1869,7 @@
             <stop_y> 599</stop_y>
             <goods>
                 <goods_type name="phone">9022</goods_type>
-                <goods_type name="smartphone">1111</goods_type>
+                <goods_type name="snickers">1111</goods_type>
             </goods>
         </shelf>
 
@@ -1689,6 +1901,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="trousers">390</goods_type>
+                <goods_type name="tablet">320</goods_type>
             </goods>
         </shelf>
         <shelf id="154">
@@ -1697,7 +1911,7 @@
             <stop_x>520</stop_x>
             <stop_y> 599</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -1718,7 +1932,7 @@
             <stop_x>440.2</stop_x>
             <stop_y>599</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
         </shelf>
@@ -1740,6 +1954,8 @@
             <goods>
                 <goods_type name="monitor">100</goods_type>
                 <goods_type name="chair">200</goods_type>
+                <goods_type name="container">90</goods_type>
+                <goods_type name="jug">120</goods_type>
             </goods>
         </shelf>
         <shelf id="144">
@@ -1748,7 +1964,7 @@
             <stop_x>520</stop_x>
             <stop_y>599</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
             </goods>
         </shelf>
@@ -1766,6 +1982,8 @@
             <stop_x>413.6</stop_x>
             <stop_y>678</stop_y>
             <goods>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">200</goods_type>
                 <goods_type name="toy">525</goods_type>
                 <goods_type name="robot">624</goods_type>
             </goods>
@@ -1777,7 +1995,9 @@
             <stop_x>440.2</stop_x>
             <stop_y>678</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="notepad">200</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="chair">200</goods_type>
             </goods>
         </shelf>
@@ -1787,7 +2007,9 @@
             <stop_x>466.8</stop_x>
             <stop_y>678</stop_y>
             <goods>
-                <goods_type name="keyboard">100</goods_type>
+                <goods_type name="monitor">100</goods_type>
+                <goods_type name="chair">300</goods_type>
+                <goods_type name="keyboard">300</goods_type>
                 <goods_type name="notepad">200</goods_type>
             </goods>
         </shelf>
@@ -1798,7 +2020,11 @@
             <stop_y>678</stop_y>
             <goods>
                 <goods_type name="monitor">100</goods_type>
-                <goods_type name="chair">200</goods_type>
+                <goods_type name="chair">300</goods_type>
+                <goods_type name="phone">9022</goods_type>
+                <goods_type name="spoon">111</goods_type>
+                <goods_type name="pen">320</goods_type>
+                <goods_type name="ring">320</goods_type>
             </goods>
         </shelf>
         <shelf id="164">
@@ -1807,8 +2033,10 @@
             <stop_x>520</stop_x>
             <stop_y>678</stop_y>
             <goods>
-                <goods_type name="shelf">100</goods_type>
+                <goods_type name="shelf">300</goods_type>
                 <goods_type name="mouse">200</goods_type>
+                <goods_type name="umbrella">90</goods_type>
+                <goods_type name="violin">120</goods_type>
             </goods>
         </shelf>
     </street>
@@ -1962,36 +2190,408 @@
    <!-- Objednavky -->
 
     <orders>
-        <!-- <order id = "1">
+        <order id = "1">
             <start>08:00:30</start>
-            <goods_type name="table">5</goods_type>
-            <goods_type name="iphone">20</goods_type>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="mixer">5</goods_type>
+            <goods_type name="blender">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
         </order>
 
         <order id = "2">
-            <start>08:00:59</start>
-            <goods_type name="shelf">12</goods_type>
-            <goods_type name="chair">45</goods_type>
+            <start>08:00:39</start>
+            <goods_type name="shelf">2</goods_type>
+            <goods_type name="chair">4</goods_type>
+            <goods_type name="mug">1</goods_type>
+            <goods_type name="hat">5</goods_type>
         </order>
 
         <order id = "3">
-            <start>12:00:00</start>
-            <goods_type name="toy">100</goods_type>
+            <start>09:32:00</start>
+            <goods_type name="cap">5</goods_type>
+            <goods_type name="knife">5</goods_type>
+            <goods_type name="toy">3</goods_type>
         </order>
 
         <order id = "4">
-            <start>17:45:45</start>
+            <start>09:45:45</start>
             <goods_type name="toy">5</goods_type>
-            <goods_type name="robot">77</goods_type>
+            <goods_type name="robot">1</goods_type>
             <goods_type name="chair">2</goods_type>
         </order>
 
-         <order id = "5">
-            <start>17:45:45</start>
+        <order id = "5">
+            <start>10:00:03</start>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="cap">5</goods_type>
+            <goods_type name="mixer">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="mug">5</goods_type>
+        </order>
+
+         <order id = "6">
+            <start>10:15:45</start>
             <goods_type name="chair">2</goods_type>
             <goods_type name="robot">1</goods_type>
+            <goods_type name="book">1</goods_type>
+        </order>
+
+        <order id = "7">
+            <start>10:32:00</start>
+            <goods_type name="robot">1</goods_type>
             <goods_type name="keyboard">1</goods_type>
-        </order> -->
+            <goods_type name="toy">3</goods_type>
+        </order>
+
+        <order id = "8">
+            <start>10:45:45</start>
+            <goods_type name="tablet">5</goods_type>
+            <goods_type name="robot">1</goods_type>
+            <goods_type name="chair">2</goods_type>
+        </order>
+
+<!--  -->
+        <order id = "9">
+            <start>11:00:03</start>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="cap">5</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="trousers">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+         <order id = "10">
+            <start>11:15:45</start>
+            <goods_type name="chair">2</goods_type>
+            <goods_type name="robot">1</goods_type>
+            <goods_type name="trousers">1</goods_type>
+        </order>
+
+        <order id = "11">
+            <start>11:32:00</start>
+            <goods_type name="toy">3</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="trousers">1</goods_type>
+        </order>
+
+        <order id = "12">
+            <start>11:45:45</start>
+            <goods_type name="toy">5</goods_type>
+            <goods_type name="robot">1</goods_type>
+            <goods_type name="trousers">2</goods_type>
+        </order>
+
+        <order id = "13">
+            <start>12:00:03</start>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="cap">5</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="mug">5</goods_type>
+        </order>
+
+         <order id = "14">
+            <start>12:15:45</start>
+            <goods_type name="chair">2</goods_type>
+            <goods_type name="mug">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "15">
+            <start>12:32:00</start>
+            <goods_type name="toy">3</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="mug">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "16">
+            <start>12:45:45</start>
+            <goods_type name="toy">5</goods_type>
+            <goods_type name="robot">1</goods_type>
+            <goods_type name="mug">2</goods_type>
+        </order>
+
+        <order id = "17">
+            <start>13:00:03</start>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="cap">5</goods_type>
+            <goods_type name="dress">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+         <order id = "18">
+            <start>13:15:45</start>
+            <goods_type name="chair">2</goods_type>
+            <goods_type name="dress">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "19">
+            <start>13:32:00</start>
+            <goods_type name="toy">3</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="dress">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "20">
+            <start>13:45:45</start>
+            <goods_type name="toy">5</goods_type>
+            <goods_type name="robot">1</goods_type>
+            <goods_type name="dress">2</goods_type>
+        </order>
+
+        <order id = "21">
+            <start>14:00:03</start>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="cap">5</goods_type>
+            <goods_type name="iron">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+         <order id = "22">
+            <start>14:15:45</start>
+            <goods_type name="chair">2</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="iron">5</goods_type>
+        </order>
+
+        <order id = "23">
+            <start>14:32:00</start>
+            <goods_type name="iron">3</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "24">
+            <start>14:45:45</start>
+            <goods_type name="iron">5</goods_type>
+            <goods_type name="robot">1</goods_type>
+            <goods_type name="chair">2</goods_type>
+        </order>
+
+        <order id = "25">
+            <start>15:00:03</start>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="cap">5</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="scirt">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+         <order id = "26">
+            <start>15:15:45</start>
+            <goods_type name="chair">2</goods_type>
+            <goods_type name="scirt">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "27">
+            <start>15:32:00</start>
+            <goods_type name="toy">3</goods_type>
+            <goods_type name="scirt">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "28">
+            <start>15:45:45</start>
+            <goods_type name="toy">5</goods_type>
+            <goods_type name="robot">1</goods_type>
+            <goods_type name="scirt">2</goods_type>
+        </order>
+
+        <order id = "29">
+            <start>16:00:03</start>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="chess">5</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+         <order id = "30">
+            <start>16:15:45</start>
+            <goods_type name="chair">2</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="chess">5</goods_type>
+        </order>
+
+        <order id = "31">
+            <start>16:32:00</start>
+            <goods_type name="toy">3</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="chess">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "32">
+            <start>16:45:45</start>
+            <goods_type name="toy">5</goods_type>
+            <goods_type name="chess">1</goods_type>
+            <goods_type name="chair">2</goods_type>
+        </order>
+
+        <order id = "33">
+            <start>17:00:03</start>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="cap">5</goods_type>
+            <goods_type name="kettle">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+         <order id = "34">
+            <start>17:15:45</start>
+            <goods_type name="chair">2</goods_type>
+            <goods_type name="kettle">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "35">
+            <start>17:32:00</start>
+            <goods_type name="toy">3</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="kettle">5</goods_type>
+        </order>
+
+        <order id = "36">
+            <start>17:45:45</start>
+            <goods_type name="toy">5</goods_type>
+            <goods_type name="robot">1</goods_type>
+            <goods_type name="kettle">2</goods_type>
+        </order>
+
+        <order id = "37">
+            <start>18:00:03</start>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="cap">5</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="palette">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+         <order id = "38">
+            <start>18:15:45</start>
+            <goods_type name="chair">2</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="palette">5</goods_type>
+        </order>
+
+        <order id = "39">
+            <start>18:32:00</start>
+            <goods_type name="toy">3</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="palette">5</goods_type>
+        </order>
+
+        <order id = "40">
+            <start>18:45:45</start>
+            <goods_type name="toy">5</goods_type>
+            <goods_type name="robot">1</goods_type>
+            <goods_type name="pan">2</goods_type>
+        </order>
+        <order id = "41">
+            <start>19:00:03</start>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="cap">5</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="pen">5</goods_type>
+        </order>
+
+         <order id = "42">
+            <start>19:15:45</start>
+            <goods_type name="toy">2</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "43">
+            <start>19:32:00</start>
+            <goods_type name="chair">3</goods_type>
+            <goods_type name="robot">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "44">
+            <start>19:45:45</start>
+            <goods_type name="toy">5</goods_type>
+            <goods_type name="robot">1</goods_type>
+            <goods_type name="book">2</goods_type>
+        </order>
+
+
+        <order id = "45">
+            <start>20:00:03</start>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="cap">5</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="robot">5</goods_type>
+        </order>
+
+         <order id = "46">
+            <start>20:15:45</start>
+            <goods_type name="chair">2</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="book">5</goods_type>
+        </order>
+
+        <order id = "47">
+            <start>20:32:00</start>
+            <goods_type name="robot">3</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="jacket">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "48">
+            <start>20:45:45</start>
+            <goods_type name="toy">5</goods_type>
+            <goods_type name="robot">1</goods_type>
+            <goods_type name="cap">2</goods_type>
+        </order>
+
+
+        <order id = "49">
+            <start>21:00:03</start>
+            <goods_type name="iphone">1</goods_type>
+            <goods_type name="cap">5</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="box">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+         <order id = "50">
+            <start>21:15:45</start>
+            <goods_type name="chair">2</goods_type>
+            <goods_type name="mixer">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "51">
+            <start>21:32:00</start>
+            <goods_type name="toy">3</goods_type>
+            <goods_type name="book">5</goods_type>
+            <goods_type name="pan">1</goods_type>
+            <goods_type name="scissors">5</goods_type>
+        </order>
+
+        <order id = "52">
+            <start>21:45:45</start>
+            <goods_type name="toy">5</goods_type>
+            <goods_type name="ring">1</goods_type>
+            <goods_type name="chair">2</goods_type>
+        </order>
 
     </orders>
 
@@ -1999,36 +2599,36 @@
 
     <carts>
         <cart id = "1">
-            <x>306.6</x>
-            <y>385.0</y>
+            <x>316.6</x>
+            <y>405.0</y>
         </cart>
         <cart id = "2">
             <x>280.0</x>
             <y>305.2</y>
         </cart>
         <cart id = "3">
-            <x>306.6</x>
+            <x>316.6</x>
             <y>305.2</y>
         </cart>
         <cart id = "4">
             <x>280.0</x>
-            <y>331.8</y>
+            <y>339.8</y>
         </cart>
         <cart id = "5">
-            <x>306.6</x>
-            <y>331.8</y>
+            <x>316.6</x>
+            <y>339.8</y>
         </cart>
         <cart id = "6">
             <x>280.0</x>
-            <y>358.4</y>
+            <y>373.4</y>
         </cart>
         <cart id = "7">
-            <x>306.6</x>
-            <y>358.4</y>
+            <x>316.6</x>
+            <y>373.4</y>
         </cart>
         <cart id = "8">
             <x>280.0</x>
-            <y>385.0</y>
+            <y>405.0</y>
         </cart>
     </carts>
 

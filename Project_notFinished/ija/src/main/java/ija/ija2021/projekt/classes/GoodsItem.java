@@ -1,3 +1,11 @@
+/**
+ * Project: Storage Simulation
+ * @author Roman Stepaniuk  <xstepa64>, Viktoryia Bahdanovich <xbahda01>
+ * 
+ * Class represents all functions for working with GoodsItems
+ * Date: 07.05.2021
+ */
+
 package ija.ija2021.projekt.classes;
 
 

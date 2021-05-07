@@ -9,13 +9,7 @@
   <property name="jar.name" value="ijaProject"/>
   <property name="main-class" value="ija.ija2021.projekt.Main"/>
 
-  <path id="classpath">
-    <pathelement location="${lib.dir}/jackson-annotations-2.9.0.jar"/>
-    <pathelement location="${lib.dir}/jackson-core-2.9.9.jar"/>
-    <pathelement location="${lib.dir}/jackson-databind-2.9.9.jar"/>
-    <pathelement location="${lib.dir}/jackson-dataformat-yaml-2.9.9.jar"/>
-    <pathelement location="${lib.dir}/snakeyaml-1.23.jar"/>
-  </path>
+
 
   <target name="clean">
     <delete dir="${build.dir}"/>
@@ -27,9 +21,6 @@
 
   <target name="compile" depends="clean, createFileStructure">
     <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
-      <classpath>
-        <path refid="classpath"/>
-      </classpath>
     </javac>
     <jar destfile="${dest.dir}\${jar.name}.jar" basedir="${build.dir}">
       <fileset dir="${res.dir}"/>

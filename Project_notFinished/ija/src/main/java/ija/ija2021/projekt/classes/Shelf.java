@@ -1,3 +1,11 @@
+/**
+ * Project: Storage Simulation
+ * @author Roman Stepaniuk  <xstepa64>, Viktoryia Bahdanovich <xbahda01>
+ * 
+ * Class represents all functions for working with Shelf
+ * Date: 07.05.2021
+ */
+
 package ija.ija2021.projekt.classes;
 
 import ija.ija2021.projekt.classes.Goods;
@@ -5,12 +13,7 @@ import ija.ija2021.projekt.classes.GoodsItem;
 import ija.ija2021.projekt.settings.*;
 import java.util.*;
 
-import ija.ija2021.projekt.settings.Drawable;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Shape;
-
-
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
@@ -20,8 +23,6 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Shape;
 import javafx.scene.text.Text;
 import javafx.scene.text.Font;
-
-//
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
@@ -83,10 +84,6 @@ public class Shelf implements Drawable  {
     public ArrayList<ProductInform> getProductInform(){
         return this.productInform;
     }
-
-    // void printProductInform(){
-        
-    // }
 
     public void put(GoodsItem goodsItem) {
         goodsShelf.add(goodsItem);
@@ -154,14 +151,11 @@ public class Shelf implements Drawable  {
 
 
     public void clickedOnShelf() {
-        // ArrayList<Drawable> UI = new ArrayList<>();
-        // UI.add(this);
         Drawable UI = (Drawable) this;
         gui.get(0).setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             @FXML
             public void handle(MouseEvent event) {
-                System.out.println("CLICKED! = " + productInform);
                 if(!isClicked)
                     isClicked = true;
                 else
@@ -190,7 +184,6 @@ public class Shelf implements Drawable  {
                 controller.setShelfInform(text, textInfo, UI, isClicked);
             }
         });
-        // gui.get(0).setFill(Color.CRIMSON);
     }
 
 
@@ -201,7 +194,6 @@ public class Shelf implements Drawable  {
             gui.get(0).setFill(Color.CRIMSON);
         }
     }
-
     
     public String goodsInfo() {
     	String str = "";
@@ -218,11 +210,8 @@ public class Shelf implements Drawable  {
     		str += currentGoods.getName() + " : " + String.valueOf(counter) + "; ";
     		counter = 0;
     	}
-    	
     	return str;
     }
-
-
 
     public void setGui()
     {

@@ -1,10 +1,16 @@
-package ija.ija2021.projekt.settings;
+/**
+ * Project: Storage Simulation
+ * @author Roman Stepaniuk  <xstepa64>, Viktoryia Bahdanovich <xbahda01>
+ * 
+ * Class that represents the GUI and controls all the action with it
+ * Date: 07.05.2021
+ */
 
+package ija.ija2021.projekt.settings;
 import ija.ija2021.projekt.settings.Drawable;
 
 import ija.ija2021.projekt.classes.*;
 import ija.ija2021.projekt.Main;
-// import ija.ija2021.projekt.classes.*;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -25,12 +31,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
-//
 import javafx.scene.text.Font; 
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text; 
 import javafx.stage.Stage; 
-
 
 public class MainController {
     @FXML
@@ -50,12 +54,12 @@ public class MainController {
     private Timer timer;
     private double timerScale = 1;
     private LocalTime time = LocalTime.of(7,59,30);
-    private LocalTime maxTime = LocalTime.of(23,00,00);
     private DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
     private long scaling = 1;
     private Main main;
     private Base base;
 
+    // Faster/Slowe conditions (activates by click)
     @FXML
     private void onTimeScaleChange() {
         try {
@@ -65,7 +69,7 @@ public class MainController {
                 Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid timescale (should be 1 and more)");
                 errorAlert.showAndWait();
             }
-            if (timerScale > 40)
+            if (timerScale > 10)
             {
                 Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid timescaling (too big)");
                 errorAlert.showAndWait();
@@ -78,8 +82,7 @@ public class MainController {
         }
     }
 
-
-    
+    // function resets program and run it from start
     @FXML
     private void onResetTime() {
         time = LocalTime.of(7,59,30);
@@ -87,6 +90,8 @@ public class MainController {
         main.startTime(this);
     }
 
+
+    // function for adding order by click (should be entered Goods name and quantity)
     @FXML
     private void onAddingOrder() {
         String name = orderName.getText();
@@ -95,6 +100,13 @@ public class MainController {
         if(base.getOrderList() != null && !base.getOrderList().isEmpty()){
             id = base.getOrderList().get(base.getOrderList().size() - 1).getId() + 1;
         }
+
+        if(base.getAddedOrderList() != null && !base.getAddedOrderList().isEmpty()){
+            int newId = base.getAddedOrderList().get(base.getAddedOrderList().size() - 1).getId() + 1;
+            if(id < newId)
+                id = newId;
+        }
+
         Order createOrder = new Order(id, time_label.getText());
         try{
             createOrder.addToProductInform(new ProductInform(name, Integer.parseInt(quantity)));
@@ -108,7 +120,7 @@ public class MainController {
             errorAlert.showAndWait();
             }
         } catch (Exception e){
-            Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid goods name");
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR, "Invalid goods name or quantity");
             errorAlert.showAndWait();
         }
 
@@ -116,7 +128,7 @@ public class MainController {
         base.addToOrderList(createOrder);
     }
        
-    
+    // zoom program by scrolling
     @FXML
     private void doZoom(ScrollEvent scroll) {
         scroll.consume();
@@ -128,6 +140,7 @@ public class MainController {
         map_base.layout();
     }
     
+    // set the time label
     @FXML
     public void setLabel (LocalTime time) {
     	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
@@ -135,24 +148,19 @@ public class MainController {
     }
     
 
+    // check which of drawable elements was clicked and change color according instructions
     public void ifSmthClicked(Drawable element, boolean isClicked) {
         for (Drawable draw : this.elements) {
             if (draw.equals(element) && isClicked && draw instanceof Shelf){
-                // map_base.getChildren().removeAll(draw.getGui());
                 Shelf shelf = (Shelf) draw;
                 shelf.changeColor("blue");
-                // map_base.getChildren().addAll(draw.getGui());
             } else if (draw instanceof Shelf) {
-                // map_base.getChildren().removeAll(draw.getGui());
                 Shelf shelf = (Shelf) draw;
                 shelf.changeColor("start");
-                shelf.setClicked(false);
-                // map_base.getChildren().addAll(draw.getGui());    
+                shelf.setClicked(false);   
             } else if(draw.equals(element) && isClicked && draw instanceof Base){
-                // map_base.getChildren().removeAll(draw.getGui());
                 Base base = (Base) draw;
                 base.changeColor("blue");
-                // map_base.getChildren().addAll(draw.getGui());
             }  else if (draw instanceof Base){
                 Base base = (Base) draw;
                 base.changeColor("start");
@@ -167,7 +175,7 @@ public class MainController {
             } else if (draw.equals(element) && isClicked && draw instanceof Cart){
                 Cart cart = (Cart) draw;
                 cart.changeColor("red");
-                if(cart.getShelfRoute() != null){
+                if(cart.getShelfRoute() != null && !cart.getShelfRoute().isEmpty()){
                     cart.getShelfRoute().get(0).changeColor("blue");
                 }
             } else if (draw instanceof Cart) {
@@ -179,6 +187,7 @@ public class MainController {
     }
 
 
+    // delete left inform panel and write there actual information from drawable element
     public void setShelfInform(Text text, Text textInfo, Drawable element, boolean isClicked) {
         this.deleteLeftInfopane();
         this.ifSmthClicked(element, isClicked);
@@ -187,17 +196,12 @@ public class MainController {
             line_base.getChildren().add(text);
             line_base.getChildren().add(textInfo);
         }
-        // addElementToScene(this.changed);
     }
-
 
 
     public void deleteLeftInfopane()
     {
-        
-        // map_base.getChildren().remove(this.changed);
         line_base.getChildren().removeAll(line_base.getChildren());
-        
     }
 
     public void addBase(Base base){
@@ -208,7 +212,7 @@ public class MainController {
         this.main = main;
     }
 
-    // double direction = 1;
+    // function for running carts
     @FXML
     public void cartsRun(){
         for(Drawable cartIcon : this.elements){
@@ -216,71 +220,20 @@ public class MainController {
                 map_base.getChildren().removeAll(cartIcon.getGui());
                 Cart cart = (Cart) cartIcon;
 
-
-                System.out.println("TIME = " + time_label.getText());
-                
-                // System.out.println(cart.getCoordinates());
-                
-                // if(cart.getCoordinates().getX() > 300)
-                //     direction = -1;
-                // else if (cart.getCoordinates().getX() < 100)
-                //     direction = 1;
-                
                 this.base.sendTime(time_label.getText());
-
-                // if(compareTime(time_label.getText(), "08:00:34") > 0){
-                //     ArrayList<Shelf> shelves = base.getShelfList();
-                //     ArrayList<Cart> carts = base.getCartList();
-                //     if(carts.get(0).ifShouldReturn()){
-                //         for(Shelf shelf : shelves){
-                //             carts.get(0).shelfRouteAdd(shelf);
-                //         }
-                //         carts.get(0).makeBusy();
-                //         System.out.println("TIME IS UP END");
-                //     }
-                // }
-
-
-                // if(compareTime(time_label.getText(), "08:06:34") > 0){
-                //     ArrayList<Shelf> shelves = base.getShelfList();
-                //     ArrayList<Cart> carts = base.getCartList();
-                //     if(carts.get(1).ifShouldReturn()){
-                //         for(Shelf shelf : shelves){
-                //             carts.get(1).shelfRouteAdd(shelf);
-                //         }
-                //         carts.get(1).makeBusy();
-                //         System.out.println("TIME IS UP END");
-                //     }
-                    
-                // }
-
-                // if(compareTime(time_label.getText(), "08:15:34") > 0){
-                //     ArrayList<Shelf> shelves = base.getShelfList();
-                //     ArrayList<Cart> carts = base.getCartList();
-                //     if(carts.get(2).ifShouldReturn()){
-                //         for(Shelf shelf : shelves){
-                //             carts.get(2).shelfRouteAdd(shelf);
-                //         }
-                //         carts.get(2).makeBusy();
-                //         System.out.println("TIME IS UP END");
-                //     }
-                    
-                // }
-
                 cart.run();
                 map_base.getChildren().addAll(cartIcon.getGui());
             }
         }
     }
 
-
-
+    // adds elements to scene
     public void addElementToScene(Drawable element)
     {
         map_base.getChildren().addAll(element.getGui());
     }
 
-
+    // draw elements in middle window
     public void setElements(List<Drawable> elements) {
         map_base.getChildren().removeAll(map_base.getChildren());
         this.elements = elements;

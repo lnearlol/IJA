@@ -1,3 +1,12 @@
+/**
+ * Project: Storage Simulation
+ * @author Roman Stepaniuk  <xstepa64>, Viktoryia Bahdanovich <xbahda01>
+ * 
+ * Class represents all functions for working with Base
+ * Date: 07.05.2021
+ */
+
+
 package ija.ija2021.projekt.classes;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,10 +37,20 @@ public class Base implements Drawable {
 	private ArrayList<Buy> activeBuyList;
 
 	private boolean isClicked;
-	MainController controller;
+	private MainController controller;
 
 	private ArrayList<Shape> gui;
 	
+	/**
+	 * @param x1 x coordinate of start of street
+	 * @param y1 y coordinate of start of street
+	 * @param x2 x coordinate of end of street
+	 * @param y2 y coordinate of end of street
+	 * @param id id ulice
+	 * @param controller MainController
+	 * @param base Base
+	 */
+
 	public Base(double x, double y, MainController controller) {
 		this.coordinates = new Coordinates(x, y);
 
@@ -85,22 +104,14 @@ public class Base implements Drawable {
 		return null;
 	}
 
-	public void addToOrderList(Order order/*, Semaphore semaphore*/) {
+	public void addToOrderList(Order order) {
 		this.orderList.add(order);
-//		System.out.println("SEMAPHORE WAS RELEASED");
-		// semaphore.release();
 	}
 	
 
 	public void addToActiveBuyList(ArrayList <Buy> buyList){
 		this.activeBuyList.addAll(buyList);
 	}
-
-
-	// public void removeFromOrderList(Order order) {
-	// 	this.orderList.remove(order);
-	// }
-	
 	
 	public void addToStopList(Stop stop) {
 		this.stopList.add(stop);
@@ -109,17 +120,10 @@ public class Base implements Drawable {
 	public void addToShelfList(Shelf shelf) {
 		this.shelfList.add(shelf);
 	}
-//	
+
 	public Base getBase() {
 		return this;
 	}
-
-	// public Order getOrder(Order order) {
-	// 	if (order != null)
-	// 		return this.orderList.get(order);
-	// 	else 
-	// 		return null;
-	// }
 
 	public void removeOrder(Order order) {
 		if(order != null)
@@ -130,28 +134,19 @@ public class Base implements Drawable {
 		this.shelfList.add(shelf);
 	}
 	
-//	public ArrayList <Shelf> getShelfList(){
-//		return this.shelfList;
-//	}
 
 	public void setAlternativeWay(Street street){
-		for(Cart cart : this.cartList){
-			System.out.println("?????????????????????????????????????\n?????????????????????????????????????\n?????????????????????????????????????\n?????????????????????????????????????\n?????????????????????????????????????\n?????????????????????????????????????\n?????????????????????????????????????\n?????????????????????????????????????\n?????????????????????????????????????\n");
-			
+		for(Cart cart : this.cartList){			
 			if(cart.getShelfRoute() == null || cart.getShelfRoute().isEmpty())
 				continue;
 
-			// for (Street street : this.streetList){
-			if (!cart.isFree() /*&& cart.getShelfRoute().get(0).getStreet().equals(street)*/ && !street.isOnStreet(cart.getCoordinates())){
-				System.out.println("##############################################\n##############################################\n##############################################\n##############################################\n##############################################\n##############################################\n##############################################\n##############################################\n##############################################\n");
-				cart.getShelfRoute().clear();
+				if (!cart.isFree() && !street.isOnStreet(cart.getCoordinates())){
+					cart.getShelfRoute().clear();
 				cart.ShortestWayShelf();
 			}
-		// }
 		}
 	}
 	
-
     public Coordinates getFirstStreetPosition(){
 		for(Street firstStreet: this.streetList){
 			if(firstStreet.getId() == 1)
@@ -163,6 +158,14 @@ public class Base implements Drawable {
 	public Street isOnStreet(Coordinates cords){
 		for(Street street: this.streetList){
 			if (street.isOnStreet(cords))
+				return street;
+		}
+		return null;
+	}
+
+	public Street isOnStreetNotClicked(Coordinates cords){
+		for(Street street: this.streetList){
+			if (street.isOnStreet(cords) && ! street.isClicked())
 				return street;
 		}
 		return null;
@@ -182,15 +185,13 @@ public class Base implements Drawable {
     }
 
 	public void sendTime(String time){
-		// System.out.println("im here");
-		// System.out.println(this.orderList);
+		
 		if(this.orderList.isEmpty() && this.activeBuyList.isEmpty())
 			return;
 
 		ArrayList <Order> orderRemove = new ArrayList <Order>();
 		for (Order findOrder:this.orderList){
 			if(compareTime(findOrder.getTime(), time) < 0 && !findOrder.ifUsed()){
-				System.out.println("Check orders: "+findOrder.getId());
 				this.addedOrderList.add(findOrder);
 				orderRemove.add(findOrder);
 				this.addToActiveBuyList(findOrder.getBuyList());
@@ -198,25 +199,18 @@ public class Base implements Drawable {
 			}
 		} 
 
-		// System.out.println("ACTIVE BUYLIST: " + this.activeBuyList);
 		this.orderList.removeAll(orderRemove);
 		
 
-		if(!this.activeBuyList.isEmpty()){
-			System.out.println("Check buy list");
+		if(!this.activeBuyList.isEmpty() && !this.activeBuyList.equals(null)){
 			for(Cart cart : this.cartList){
-				if(cart.isFree()){
+				if(cart.isFree() && !this.activeBuyList.isEmpty()){
 					cart.addBuy(this.activeBuyList.get(0));
-					this.activeBuyList.remove(0);
+					this.activeBuyList.remove(this.activeBuyList.get(0));
 					cart.ShortestWayShelf();
 				}
 			}
 		}
-
-		// System.out.println("carts run");
-		// for(Cart cart : this.cartList){
-		// 	cart.run();
-		// }
 	}
 
 	// ---------------------
@@ -256,6 +250,10 @@ public class Base implements Drawable {
 		return this.orderList;
 	}
 
+	public ArrayList<Order> getAddedOrderList(){
+		return this.addedOrderList;
+	}
+
 	public void changeColor(String color){
         if (color == "blue")
             gui.get(0).setFill(Color.MEDIUMSLATEBLUE);
@@ -274,7 +272,6 @@ public class Base implements Drawable {
                     isClicked = true;
                 else
                     isClicked = false;
-
 				String	inform = "Zpracovane:\n\n";
 				if(addedOrderList.isEmpty())
 					inform += "prazdny\n";
@@ -283,7 +280,6 @@ public class Base implements Drawable {
 						inform += order.printProducInform();
 					}
 				}
-
                 inform += "\nNe zpracovane:\n\n";
 				if(orderList.isEmpty())
 					inform += "prazdny\n";
@@ -311,7 +307,6 @@ public class Base implements Drawable {
                 controller.setShelfInform(text, textInfo, UI, isClicked);
             }
         });
-        // gui.get(0).setFill(Color.CRIMSON);
     }
 
 	public String streetsInfo(){
