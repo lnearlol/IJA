@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ija.ija2021.projekt.settings.MainController">
+   <right>
+      <AnchorPane prefHeight="700.0" prefWidth="214.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="timeScale" layoutX="27.0" layoutY="56.0" prefHeight="19.0" prefWidth="37.0" />
+            <Button layoutX="74.0" layoutY="56.0" mnemonicParsing="false" onAction="#onTimeScaleChange" prefHeight="23.0" prefWidth="117.0" text="Faster/Slower" />
+            <Label fx:id="time_label" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="14.0" prefHeight="26.0" prefWidth="134.0" textAlignment="CENTER" />
+            <Button layoutX="24.0" layoutY="231.0" mnemonicParsing="false" onAction="#onResetTime" prefHeight="26.0" prefWidth="164.0" text="Reset Time" />
+            <Button layoutX="21.0" layoutY="165.0" mnemonicParsing="false" onAction="#onAddingOrder" prefHeight="26.0" prefWidth="172.0" text="Add order" textFill="#075e70" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="208.0" prefHeight="20.0" prefWidth="167.0" text="Settings:" textAlignment="CENTER" />
+            <TextField fx:id="orderName" layoutX="22.0" layoutY="130.0" prefHeight="25.0" prefWidth="81.0" promptText="goods" />
+            <TextField fx:id="orderQuantity" layoutX="111.0" layoutY="130.0" prefHeight="25.0" prefWidth="81.0" promptText="quantity" />
+            <TextField fx:id="jumpInTime" layoutX="24.0" layoutY="291.0" prefHeight="26.0" prefWidth="163.0" />
+            <Button layoutX="24.0" layoutY="324.0" mnemonicParsing="false" onAction="#onJumpInTime" prefHeight="26.0" prefWidth="164.0" text="Jump in time" />
+         </children></AnchorPane>
+   </right>
+   <center>
+      <ScrollPane onScroll="#doZoom" pannable="true" prefHeight="400.0" prefWidth="209.0" BorderPane.alignment="CENTER">
+         <content>
+            <Group>
+               <children>
+                  <Pane fx:id="map_base" layoutX="15.0" layoutY="140.0" onScroll="#doZoom" prefHeight="700.0" prefWidth="840.0" />
+               </children>
+            </Group>
+         </content>
+      </ScrollPane>
+   </center>
+   <left>
+      <ScrollPane prefHeight="700.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+         <content>
+            <Group>
+               <children>
+                  <Pane fx:id="line_base" layoutY="14.0" prefHeight="700.0" prefWidth="250.0" />
+               </children>
+            </Group>
+         </content>
+      </ScrollPane>
+   </left>
+</BorderPane>
